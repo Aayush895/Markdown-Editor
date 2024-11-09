@@ -23,6 +23,10 @@ const userSchema = new Schema(
       type: String,
       require: [true, "password is required"],
     },
+    profilePic: {
+      type: String,
+      require: true,
+    },
     refreshToken: {
       type: String,
     },
