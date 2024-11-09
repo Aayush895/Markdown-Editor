@@ -1,17 +1,17 @@
-class ApiError extends Error {
-  constructor(
-    statusCode,
-    message = "Something went wrong",
-    error = [],
-    stack = ""
-  ) {
-    super(message);
-    this.statusCode = statusCode;
-    this.data = null;
-    this.message = message;
-    this.success = false;
-    this.errors = this.errors;
+import { StatusCodes } from "http-status-codes";
+
+function apiError(req, res, error) {
+  console.log(error);
+  if (error.status) {
+    return res.status(error.status).json({
+      message: error.message,
+      success: false,
+    });
   }
+  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+    message: "Internal server error",
+    success: false,
+  });
 }
 
-export { ApiError };
+export default apiError;
