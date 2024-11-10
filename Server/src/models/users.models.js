@@ -36,7 +36,7 @@ const userSchema = new Schema(
 
 userSchema.pre("save", async function (next) {
   // this function will run everytime when data is being modified but we want this to run only when password is being modified or being saved.
-  if (!this.modified("password")) return next();
+  if (!this.isModified("password")) return next();
 
   this.password = bcrypt.hash(this.password, 12);
   next();

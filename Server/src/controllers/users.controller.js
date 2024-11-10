@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
 import apiResponse from "../utils/ApiResponse.js";
 import apiError from "../utils/ApiError.js";
-import { registerUserService } from "../services/userServicejs.js";
+import { registerUserService } from "../services/userService.js";
 
 // User registeration controller
 export async function registerUser(req, res) {
@@ -10,15 +10,15 @@ export async function registerUser(req, res) {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      profilePic: req.body.profilePic,
+      profilePic: req.file.path,
     });
 
-    return apiResponse(
-      responseData,
-      StatusCodes.CREATED,
-      "User registered successfully"
-    );
+    return res.status(StatusCodes.CREATED).json({
+      success: true,
+      data: responseData,
+      message: "User registered successfully",
+    });
   } catch (error) {
-    return apiError(req, res, error);
+    console.log(error);
   }
 }

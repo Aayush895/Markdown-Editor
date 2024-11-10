@@ -7,11 +7,7 @@ export async function checkExisitingUserRepository(username, email) {
     const doesUserExist = await User.find({ $or: [{ username, email }] });
     return doesUserExist;
   } catch (error) {
-    throw {
-      message: "Error in db querying",
-      status: StatusCodes.INTERNAL_SERVER_ERROR,
-      error,
-    };
+    console.log(error);
   }
 }
 
@@ -23,11 +19,18 @@ export async function registerUserRepository({
 }) {
   try {
     const user = await User.create({ username, email, password, profilePic });
+
     return user;
   } catch (error) {
-    throw {
-      message: "Error in user registeration",
-      status: StatusCodes.BAD_REQUEST.error,
-    };
+    console.log(error);
+  }
+}
+
+export async function fetchUserbyId(id) {
+  try {
+    const user = await User.findById(id).select("-password -refreshToken");
+    return user;
+  } catch (error) {
+    console.log(error);
   }
 }
