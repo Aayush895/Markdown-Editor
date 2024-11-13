@@ -6,8 +6,7 @@ import {
   registerUserRepository,
 } from "../repository/userRepository.js";
 import { uploadOnCloudinary } from "../config/cloudinaryConfig.js";
-import apiResponse from "../utils/ApiResponse.js";
-import apiError from "../utils/ApiError.js";
+import ApiError from "../config/ApiError.js";
 
 export async function registerUserService({
   username,
@@ -18,30 +17,23 @@ export async function registerUserService({
   try {
     const doesUserExist = await checkExisitingUserRepository(username, email);
 
-    if (doesUserExist === true) {
-      throw {
-        message: "User already exists!",
-        status: StatusCodes.CONFLICT,
-      };
+    if (doesUserExist) {
+      throw new ApiError(
+        "User with this username or email already exists",
+        StatusCodes.BAD_REQUEST
+      );
     }
 
     // Check if the file is uploaded
     if (!profilePic) {
-      throw {
-        message: "Profile pic is required",
-        status: StatusCodes.BAD_REQUEST,
-      };
+      throw new ApiError("Profile pic is required", StatusCodes.BAD_REQUEST);
     }
 
     // Upload the image on cloudinary
-    // console.log(profilePic)
     const profilePicture = await uploadOnCloudinary(profilePic);
-    
+
     if (!profilePicture) {
-      throw {
-        message: "Profile pic upload failed",
-        status: StatusCodes.BAD_REQUEST,
-      };
+      throw new ApiError("Profile pic upload failed", StatusCodes.BAD_REQUEST);
     }
 
     // Create the user object and store it in DB
@@ -53,13 +45,19 @@ export async function registerUserService({
     });
 
     // Again fetch the user and remove pass and token
-    // console.log(user);
-    
     const modifiedUserData = await fetchUserbyId(user._id);
 
     return modifiedUserData;
   } catch (error) {
     // Propagate the error to the controller
+    if (!(error instanceof ApiError)) {
+      // In case a non-ApiError is thrown (for example, unexpected errors), throw a general internal server error
+      throw new ApiError(
+        "An unexpected error occurred. Please try again later.",
+        StatusCodes.INTERNAL_SERVER_ERROR
+      );
+    }
+    // If it is an instance of ApiError, just rethrow it as it has the correct status and message
     throw error;
   }
 }

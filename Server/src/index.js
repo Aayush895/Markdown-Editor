@@ -5,6 +5,7 @@ import logger from "../logs/logger.js";
 import apiRouter from "./routes/apiRoutes.js";
 import { PORT } from "./config/serverConfig.js";
 import connectDB from "./config/dbConfig.js";
+import errorMiddleware from "./middlewares/errorMiddleware.js";
 
 const app = express();
 const morganFormat = ":method :url :status :response-time ms";
@@ -33,6 +34,7 @@ app.use(
 );
 
 app.use("/api", apiRouter);
+app.use(errorMiddleware)
 
 app.listen(PORT, async () => {
   try {

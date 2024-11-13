@@ -1,0 +1,58 @@
+error: Error: 400 - User with this username or email already exists - Error: User with this username or email already exists
+    at registerUserService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/userService.js:21:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:7:26) {"timestamp":"2024-11-13T13:09:46.272Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:11:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:10:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-13T13:16:09.214Z"}
+error: Error: 400 - email is required., password is required. - Error: email is required., password is required.
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21) {"timestamp":"2024-11-13T13:22:49.097Z"}
+error: Error: 400 - username is required., email is required., password is required. - Error: username is required., email is required., password is required.
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at multerMiddleware (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-13T13:22:54.915Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:11:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-13T13:23:05.189Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:11:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-13T13:23:17.674Z"}

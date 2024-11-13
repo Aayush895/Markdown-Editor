@@ -1,10 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import apiResponse from "../utils/ApiResponse.js";
-import apiError from "../utils/ApiError.js";
 import { registerUserService } from "../services/userService.js";
 
 // User registeration controller
-export async function registerUser(req, res) {
+export async function registerUser(req, res, next) {
   try {
     const responseData = await registerUserService({
       username: req.body.username,
@@ -19,6 +17,6 @@ export async function registerUser(req, res) {
       message: "User registered successfully",
     });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 }
