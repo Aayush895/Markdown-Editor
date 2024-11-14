@@ -1,17 +1,11 @@
-import { StatusCodes } from "http-status-codes";
+class ApiError extends Error {
+  constructor(message, statusCode, isOperational = true) {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = isOperational;
 
-function apiError(req, res, error) {
-  console.log(error);
-  if (error.status) {
-    return res.status(error.status).json({
-      message: error.message,
-      success: false,
-    });
+    // Capturing stack trace for debugging
+    Error.captureStackTrace(this, this.constructor);
   }
-  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-    message: "Internal server error",
-    success: false,
-  });
 }
-
-export default apiError;
+export default ApiError;

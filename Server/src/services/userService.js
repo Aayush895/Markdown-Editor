@@ -6,7 +6,7 @@ import {
   registerUserRepository,
 } from "../repository/userRepository.js";
 import { uploadOnCloudinary } from "../config/cloudinaryConfig.js";
-import ApiError from "../config/ApiError.js";
+import ApiError from "../utils/ApiError.js";
 
 export async function registerUserService({
   username,

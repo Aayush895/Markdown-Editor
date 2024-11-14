@@ -1,5 +1,5 @@
 // Returns a zod validation middleware which will be used to validate the incoming request from client
-import ApiError from "../config/ApiError.js";
+import ApiError from "../utils/ApiError.js";
 import { ZodError } from "zod";
 
 export function validateRequestData(schema) {

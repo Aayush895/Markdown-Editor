@@ -1,5 +1,5 @@
 // Here all the database interaction will take place
-import ApiError from "../config/ApiError.js";
+import ApiError from "../utils/ApiError.js";
 import { User } from "../models/users.models.js";
 
 export async function checkExisitingUserRepository(username, email) {

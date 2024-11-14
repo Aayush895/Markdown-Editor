@@ -1,4 +1,3 @@
-import ApiError from "../config/ApiError.js";
 import logger from "../../logs/logger.js";
 
 const errorMiddleware = (err, req, res, next) => {
