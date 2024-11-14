@@ -1,5 +1,6 @@
 import express, { urlencoded } from "express";
 import cors from "cors";
+import cookieParser from 'cookie-parser'
 import morgan from "morgan";
 import logger from "../logs/logger.js";
 import apiRouter from "./routes/apiRoutes.js";
@@ -17,6 +18,7 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(cookieParser())
 app.use(
   morgan(morganFormat, {
     stream: {

@@ -61,3 +61,36 @@ export async function registerUserService({
     throw error;
   }
 }
+
+export async function loginUserService({ username, email, password }) {
+  try {
+    const doesUserExist = await checkExisitingUserRepository(username, email);
+
+    if (!doesUserExist) {
+      throw new Error({
+        message: "Invalid username or email, please check your credentials!",
+      });
+    }
+
+    const validatePass = await doesUserExist.isPasswordCorrect(password);
+    if (!validatePass) {
+      throw new Error({
+        message: "Invalid password, please check it and try again!",
+        status: StatusCodes.BAD_REQUEST,
+      });
+    }
+
+    const fetchUser = await fetchUserbyId(doesUserExist._id);
+
+    return fetchUser;
+  } catch (error) {
+    if (!(error instanceof ApiError)) {
+      throw new ApiError(
+        "An unexpected error occurred. Please try again later.",
+        StatusCodes.INTERNAL_SERVER_ERROR
+      );
+    }
+
+    throw error;
+  }
+}

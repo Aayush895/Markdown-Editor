@@ -2,7 +2,11 @@ import express from "express";
 import { validateRequestData } from "../../middlewares/zodMiddleware.js";
 import { userRegisterationSchema } from "../../validators/userSchema.js";
 import { upload } from "../../config/multerConfig.js";
-import { registerUser } from "../../controllers/users.controller.js";
+import {
+  registerUser,
+  loginUser,
+  logoutUser,
+} from "../../controllers/users.controller.js";
 
 const router = express.Router();
 
@@ -14,4 +18,8 @@ router.post(
   registerUser
 );
 
+router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
+router.post("/logout", logoutUser);
+
+// TODO: Edit user
 export default router;

@@ -108,3 +108,24 @@ error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeE
     at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
     at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-13T13:23:17.674Z"}
 info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"6.526"} {"timestamp":"2024-11-13T13:23:17.676Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2785.658"} {"timestamp":"2024-11-14T10:59:20.653Z"}
+error: Error: 500 - loginUserService is not defined - ReferenceError: loginUserService is not defined
+    at loginUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:28:34)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-14T11:57:07.865Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"500","responseTime":"17.552"} {"timestamp":"2024-11-14T11:57:07.881Z"}
+error: Error: 500 - res.status(...).cookies is not a function - TypeError: res.status(...).cookies is not a function
+    at loginUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:45:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-11-14T11:58:00.385Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"500","responseTime":"364.036"} {"timestamp":"2024-11-14T11:58:00.391Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"395.963"} {"timestamp":"2024-11-14T11:58:37.719Z"}
+info: {"method":"POST","url":"/api/v1/users/logout","status":"200","responseTime":"12.184"} {"timestamp":"2024-11-14T12:49:07.258Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"395.548"} {"timestamp":"2024-11-14T12:49:31.905Z"}
+info: {"method":"POST","url":"/api/v1/users/logout","status":"200","responseTime":"2.306"} {"timestamp":"2024-11-14T12:49:49.580Z"}
