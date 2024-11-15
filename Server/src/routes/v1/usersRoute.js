@@ -6,6 +6,7 @@ import {
   registerUser,
   loginUser,
   logoutUser,
+  refreshAccessToken,
 } from "../../controllers/users.controller.js";
 
 const router = express.Router();
@@ -20,6 +21,6 @@ router.post(
 
 router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
 router.post("/logout", logoutUser);
+router.post("/refresh-token", refreshAccessToken);
 
-// TODO: Edit user
 export default router;

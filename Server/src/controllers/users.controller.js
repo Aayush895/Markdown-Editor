@@ -1,7 +1,12 @@
 import { StatusCodes } from "http-status-codes";
-import { registerUserService,loginUserService } from "../services/userService.js";
+import {
+  registerUserService,
+  loginUserService,
+  refreshAccessTokenService,
+} from "../services/userService.js";
 import generateAccessRefreshToken from "../utils/generateAccessAndRefreshTokens.js";
 import { User } from "../models/users.models.js";
+import ApiError from "../utils/ApiError.js";
 
 // User registeration controller
 export async function registerUser(req, res, next) {
@@ -55,6 +60,7 @@ export async function loginUser(req, res, next) {
   }
 }
 
+// User logout controller
 export async function logoutUser(req, res, next) {
   try {
     const options = {
@@ -62,14 +68,47 @@ export async function logoutUser(req, res, next) {
       secure: true,
     };
 
-    res.clearCookie("accessToken", options)
-    res.clearCookie("refreshToken", options)
+    res.clearCookie("accessToken", options);
+    res.clearCookie("refreshToken", options);
 
     return res.status(StatusCodes.OK).json({
       success: true,
       message: "Logged out successfully",
     });
   } catch (error) {
-    next(error)
+    next(error);
+  }
+}
+
+// Refresh access token
+export async function refreshAccessToken(req, res, next) {
+  try {
+    const incomingRefreshToken =
+      req.cookies.refreshToken || req.body.refreshToken;
+
+    if (!incomingRefreshToken) {
+      throw new ApiError("Unauthorized Access", StatusCodes.UNAUTHORIZED);
+    }
+
+    // Below are the newly generated access and refresh tokens
+    const { accessToken, refreshToken } =
+      await refreshAccessTokenService(incomingRefreshToken);
+    const options = {
+      httpOnly: true,
+      secure: true,
+    };
+
+    return res
+      .status(200)
+      .cookie("accessToken", accessToken, options)
+      .cookie("refreshToken", refreshToken, options)
+      .json({
+        success: true,
+        message: "Access token refreshed",
+        accessToken,
+        refreshToken,
+      });
+  } catch (error) {
+    next(error);
   }
 }

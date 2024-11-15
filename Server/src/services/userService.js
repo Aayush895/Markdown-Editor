@@ -1,5 +1,6 @@
 // All business logic is written here
 import { StatusCodes } from "http-status-codes";
+import jwt from "jsonwebtoken";
 import {
   checkExisitingUserRepository,
   fetchUserbyId,
@@ -7,6 +8,9 @@ import {
 } from "../repository/userRepository.js";
 import { uploadOnCloudinary } from "../config/cloudinaryConfig.js";
 import ApiError from "../utils/ApiError.js";
+import { REFRESH_TOKEN_SECRET } from "../config/serverConfig.js";
+import { User } from "../models/users.models.js";
+import generateAccessRefreshToken from "../utils/generateAccessAndRefreshTokens.js";
 
 export async function registerUserService({
   username,
@@ -93,4 +97,31 @@ export async function loginUserService({ username, email, password }) {
 
     throw error;
   }
+}
+
+export async function refreshAccessTokenService(incomingRefreshToken) {
+  const decodeincomingToken = await jwt.verify(
+    incomingRefreshToken,
+    REFRESH_TOKEN_SECRET
+  );
+
+  const user = await User.findById(decodeincomingToken._id);
+  if (!user) {
+    throw new ApiError("Invalid refresh token", StatusCodes.UNAUTHORIZED);
+  }
+
+  if (incomingRefreshToken !== user?.refreshToken) {
+    throw new ApiError(
+      "Refresh token is expired or used",
+      StatusCodes.UNAUTHORIZED
+    );
+  }
+
+  const { accessToken, refreshToken } = await generateAccessRefreshToken(
+    user._id
+  );
+
+  console.log("Refresh token: ", refreshToken);
+
+  return { accessToken, refreshToken };
 }
