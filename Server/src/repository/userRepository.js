@@ -7,7 +7,6 @@ export async function checkExisitingUserRepository(username, email) {
     const doesUserExist = await User.findOne({ $or: [{ username, email }] });
     return doesUserExist;
   } catch (error) {
-    console.error("Error checking existing user:", error);
     throw new ApiError(
       "Database error while checking if user exists",
       StatusCodes.INTERNAL_SERVER_ERROR

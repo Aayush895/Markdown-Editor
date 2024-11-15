@@ -7,8 +7,9 @@ import { fetchUserbyId } from "../repository/userRepository.js";
 
 dotenv.config();
 export async function jwtValidation(req, res, next) {
-  const authHeader = req.headers["authorization"];
-  const token = authHeader.split(" ")[1];
+  const token =
+    req.cookies?.accessToken ||
+    req.header("Authorization")?.replace("Bearer ", "");
 
   if (!token) {
     throw new ApiError("Unauthorised access", StatusCodes.UNAUTHORIZED);
@@ -18,7 +19,7 @@ export async function jwtValidation(req, res, next) {
     const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET);
     const user = await fetchUserbyId(decodeToken._id);
 
-    req.user = user;
+    req.user = user._id;
 
     next();
   } catch (error) {
