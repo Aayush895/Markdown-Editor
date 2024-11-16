@@ -23,9 +23,28 @@ export async function jwtValidation(req, res, next) {
 
     next();
   } catch (error) {
-    throw new ApiError(
-      error?.message || "Invalid access token",
-      StatusCodes.UNAUTHORIZED
+    if (error instanceof jwt.TokenExpiredError) {
+      return next(
+        new ApiError("Access token has expired", StatusCodes.UNAUTHORIZED)
+      );
+    }
+
+    // Handle specific JWT errors (expired or invalid)
+    if (error instanceof jwt.JsonWebTokenError) {
+      return next(
+        new ApiError(
+          "Invalid or malformed access token",
+          StatusCodes.UNAUTHORIZED
+        )
+      );
+    }
+
+    // Catch any other errors (e.g., database issues or unexpected errors)
+    return next(
+      new ApiError(
+        error?.message || "Internal server error",
+        StatusCodes.INTERNAL_SERVER_ERROR
+      )
     );
   }
 }

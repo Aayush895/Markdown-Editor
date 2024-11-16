@@ -1,5 +1,10 @@
 import express from "express";
-import { createDocument } from "../../controllers/documents.controller.js";
+import {
+  createDocument,
+  deleteDocument,
+  editDocs,
+  fetchAllDocs,
+} from "../../controllers/documents.controller.js";
 import { validateRequestData } from "../../middlewares/zodMiddleware.js";
 import { documentCreationSchema } from "../../validators/documentSchema.js";
 import { jwtValidation } from "../../middlewares/jwtValidationMiddleware.js";
@@ -13,4 +18,8 @@ router.post(
   createDocument
 );
 
+router.get("/get-docs", jwtValidation, fetchAllDocs);
+router.patch("/edit/:id", jwtValidation, editDocs)
+
+router.delete("/delete/:id", jwtValidation, deleteDocument);
 export default router;

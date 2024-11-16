@@ -295,3 +295,53 @@ error: Error: 400 - name has an error: Name is required, name has an error: Name
     at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
     at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-11-15T14:41:01.678Z"}
 info: {"method":"POST","url":"/api/v1/documents/create?name=Sample","status":"400","responseTime":"4.066"} {"timestamp":"2024-11-15T14:41:01.680Z"}
+error: Error: 401 - Invalid or malformed access token - Error: Invalid or malformed access token
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:29:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-16T17:40:12.298Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"401","responseTime":"15.756"} {"timestamp":"2024-11-16T17:40:12.312Z"}
+error: Error: 401 - Invalid or malformed access token - Error: Invalid or malformed access token
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:35:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-16T17:41:25.584Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"401","responseTime":"10.676"} {"timestamp":"2024-11-16T17:41:25.594Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"368.845"} {"timestamp":"2024-11-16T17:42:22.382Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"316.503"} {"timestamp":"2024-11-16T17:42:56.072Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at deleteDocumentService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:27:26) {"timestamp":"2024-11-16T17:43:51.632Z"}
+info: {"method":"DELETE","url":"/api/v1/documents/delete/6738d99f75c601164e8aa755","status":"500","responseTime":"41.807"} {"timestamp":"2024-11-16T17:43:51.636Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at deleteDocumentService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:27:5) {"timestamp":"2024-11-16T17:45:41.714Z"}
+info: {"method":"DELETE","url":"/api/v1/documents/delete/6738d99f75c601164e8aa755","status":"500","responseTime":"222.536"} {"timestamp":"2024-11-16T17:45:41.730Z"}
+error: Error: 500 - Cannot destructure property 'id' of 'req.query.id' as it is undefined. - TypeError: Cannot destructure property 'id' of 'req.query.id' as it is undefined.
+    at deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:24:12)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:24:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-11-16T17:46:00.936Z"}
+info: {"method":"DELETE","url":"/api/v1/documents/delete/6738d99f75c601164e8aa755","status":"500","responseTime":"28.385"} {"timestamp":"2024-11-16T17:46:00.943Z"}
+info: {"method":"DELETE","url":"/api/v1/documents/delete/6738d99f75c601164e8aa755","status":"201","responseTime":"43.741"} {"timestamp":"2024-11-16T17:47:50.386Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"48.385"} {"timestamp":"2024-11-16T18:24:19.439Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"78.834"} {"timestamp":"2024-11-16T18:24:53.913Z"}
+info: {"method":"DELETE","url":"/api/v1/documents/delete/6738e375276e4fdb908d29bf","status":"201","responseTime":"44.862"} {"timestamp":"2024-11-16T18:27:14.407Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"57.700"} {"timestamp":"2024-11-16T18:53:57.118Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"41.792"} {"timestamp":"2024-11-16T18:55:16.127Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"34.349"} {"timestamp":"2024-11-16T18:55:40.558Z"}

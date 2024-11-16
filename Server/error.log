@@ -195,3 +195,39 @@ error: Error: 400 - name has an error: Name is required, name has an error: Name
     at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
     at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
     at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-11-15T14:41:01.678Z"}
+error: Error: 401 - Invalid or malformed access token - Error: Invalid or malformed access token
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:29:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-16T17:40:12.298Z"}
+error: Error: 401 - Invalid or malformed access token - Error: Invalid or malformed access token
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:35:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-11-16T17:41:25.584Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at deleteDocumentService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:27:26) {"timestamp":"2024-11-16T17:43:51.632Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at deleteDocumentService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:27:5) {"timestamp":"2024-11-16T17:45:41.714Z"}
+error: Error: 500 - Cannot destructure property 'id' of 'req.query.id' as it is undefined. - TypeError: Cannot destructure property 'id' of 'req.query.id' as it is undefined.
+    at deleteDocument (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:24:12)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:24:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-11-16T17:46:00.936Z"}

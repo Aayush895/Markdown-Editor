@@ -2,6 +2,9 @@ import { StatusCodes } from "http-status-codes";
 import {
   createNewDocument,
   checkDocumentExist,
+  deleteDocumentRepo,
+  fetchDocsRepo,
+  editDocsRepo,
 } from "../repository/documentRepository.js";
 import ApiError from "../utils/ApiError.js";
 
@@ -34,5 +37,46 @@ export async function createDocumentService({ name, content, userDetails }) {
     }
     // If it is an instance of ApiError, just rethrow it as it has the correct status and message
     throw error;
+  }
+}
+
+export async function deleteDocumentService(documentId) {
+  try {
+    const deleteDoc = await deleteDocumentRepo(documentId);
+
+    if (!deleteDoc) {
+      throw new ApiError("Document not found", StatusCodes.NOT_FOUND);
+    }
+
+    return deleteDoc;
+  } catch (error) {
+    throw new ApiError(
+      "Internal Server Error",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
+  }
+}
+
+export async function fetchAllDocsService() {
+  try {
+    const fetchedDocs = await fetchDocsRepo();
+    return fetchedDocs;
+  } catch (error) {
+    throw new ApiError(
+      "Internal Server Error",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
+  }
+}
+
+export async function editDocsService(name, content, docId) {
+  try {
+    const editedDocs = await editDocsRepo(name, content, docId)
+    return editedDocs
+  } catch (error) {
+    throw new ApiError(
+      "Internal Server Error",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
   }
 }

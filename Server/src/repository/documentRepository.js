@@ -29,3 +29,47 @@ export async function createNewDocument({ name, content, userDetails }) {
     );
   }
 }
+
+export async function deleteDocumentRepo(documentId) {
+  try {
+    const deleteDoc = await Document.findByIdAndDelete(documentId);
+    return deleteDoc;
+  } catch (error) {
+    throw new ApiError(
+      "Database error while deleting a document",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
+  }
+}
+
+export async function fetchDocsRepo() {
+  try {
+    const fetchDocs = await Document.find();
+    return fetchDocs;
+  } catch (error) {
+    throw new ApiError(
+      "Database error while fetching a document",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
+  }
+}
+
+export async function editDocsRepo(name, content, docId) {
+  try {
+    const updatedDoc = await Document.findByIdAndUpdate(
+      {
+        _id: docId,
+      },
+      {
+        name,
+        content,
+      }
+    );
+    return updatedDoc;
+  } catch (error) {
+    throw new ApiError(
+      "Database error while updating a document",
+      StatusCodes.INTERNAL_SERVER_ERROR
+    );
+  }
+}

@@ -17,6 +17,8 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
     - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
+- [Features built so far](#features-built-so-far)
+- [Features to work on](#features-to-work-on)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -144,15 +146,24 @@ const healthCheck = asyncHandler(async function health(req, res) {
 export { healthCheck }
 ```
 
-How the function finally looks like when returned from `asyncHandler` function
+# Features built so far
 
-```js
-// requestHandler == health
-// Above function becomes when asyncHandler is called:
+- Done with the server. The server has following features:
+  - The user can register themselves from the application
+  - The user can login themselves from the application
+  - The user can logout themselves from the application
+  - The user can perfrom CRUD operations on the documents
 
-const healthCheck = (req, res, next) => {
-  Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
-}
+# Features to work on
 
-// If the promise.resolve resolves the promise then good otherwise there's an error which will be caught by catch
-```
+- Create a UI for the client.
+- The UI should be responsvie.
+- The user should be able to perform all the server functions from the UI.
+- Proper error handling should also be done on the UI side.
+- The user should also be to share the live link of this doc with others.
+- User should also be able to download the doc by converting the doc from .md to .pdf file. (The conversion part is optional).
+- The user should only be able to read the doc.
+
+**Optional Features to work on in the feature to enhance knowledge**
+
+- Different users should be able to collaborate on the docs when given permission.(Kind of like google docs. If one person makes changes in the docs from their side then the other user should be able to view those changes in the docs as well live)
