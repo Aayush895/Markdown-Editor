@@ -19,3 +19,5 @@ README-template.md
 node_modules
 testing
 .env
+login-page-both-modes.svg
+signup-page-both-modes.svg

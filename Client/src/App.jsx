@@ -1,5 +1,11 @@
+import Container from './Components/Container'
+
 function App() {
-  return <h1>App</h1>
+  return (
+    <>
+      <Container />
+    </>
+  )
 }
 
 export default App
