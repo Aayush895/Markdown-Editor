@@ -345,3 +345,111 @@ info: {"method":"DELETE","url":"/api/v1/documents/delete/6738e375276e4fdb908d29b
 info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"57.700"} {"timestamp":"2024-11-16T18:53:57.118Z"}
 info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"41.792"} {"timestamp":"2024-11-16T18:55:16.127Z"}
 info: {"method":"PATCH","url":"/api/v1/documents/edit/67375d35228b58cd38eaa3e0","status":"200","responseTime":"34.349"} {"timestamp":"2024-11-16T18:55:40.558Z"}
+info: {"method":"POST","url":"/v1/api/users/register","status":"404","responseTime":"2.339"} {"timestamp":"2024-11-21T12:24:46.277Z"}
+info: {"method":"POST","url":"/v1/api/users/register","status":"404","responseTime":"1.833"} {"timestamp":"2024-11-21T12:28:25.860Z"}
+info: {"method":"POST","url":"/v1/api/users/register","status":"404","responseTime":"0.743"} {"timestamp":"2024-11-21T12:29:49.506Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at multerMiddleware (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3) {"timestamp":"2024-11-21T12:33:25.813Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"14.641"} {"timestamp":"2024-11-21T12:33:25.819Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at multerMiddleware (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3) {"timestamp":"2024-11-21T12:34:48.329Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"11.694"} {"timestamp":"2024-11-21T12:34:48.334Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at multerMiddleware (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3) {"timestamp":"2024-11-21T12:37:03.458Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"5.489"} {"timestamp":"2024-11-21T12:37:03.462Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-21T12:39:35.153Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"19.749"} {"timestamp":"2024-11-21T12:39:35.158Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-21T12:40:06.583Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"6.329"} {"timestamp":"2024-11-21T12:40:06.587Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-21T12:49:05.004Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"26.652"} {"timestamp":"2024-11-21T12:49:05.015Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-21T12:51:32.466Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"17.387"} {"timestamp":"2024-11-21T12:51:32.471Z"}
+error: Error: 500 - Cannot read properties of undefined (reading 'path') - TypeError: Cannot read properties of undefined (reading 'path')
+    at registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:18:28)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28) {"timestamp":"2024-11-21T12:56:46.013Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"12.001"} {"timestamp":"2024-11-21T12:56:46.018Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3080.784"} {"timestamp":"2024-11-21T12:58:11.985Z"}
+error: Error: 500 - An unexpected error occurred. Please try again later. - Error: An unexpected error occurred. Please try again later.
+    at registerUserService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/userService.js:59:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:14:26) {"timestamp":"2024-11-21T13:00:25.642Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTime":"3137.541"} {"timestamp":"2024-11-21T13:00:25.644Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2958.472"} {"timestamp":"2024-11-21T13:01:41.324Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3588.775"} {"timestamp":"2024-11-21T13:09:33.790Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2830.084"} {"timestamp":"2024-11-21T13:14:30.068Z"}
