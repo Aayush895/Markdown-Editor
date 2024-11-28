@@ -61,4 +61,10 @@
   color: var(--white2);
   margin-bottom: 1rem;
   letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+#signupFormContainer > form > button:hover {
+  transform: scale(1.15);
 }

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 
 export function useRegisterUser() {
   const queryClient = new QueryClient()
-  const { mutate: registerUser } = useMutation({
+  const { mutate: registerUser, isPending } = useMutation({
     mutationFn: (user) => {
       const formData = new FormData()
       formData.append('username', user.username)
@@ -23,5 +23,5 @@ export function useRegisterUser() {
     },
   })
 
-  return { registerUser }
+  return { registerUser, isPending }
 }

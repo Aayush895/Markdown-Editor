@@ -453,3 +453,35 @@ info: {"method":"POST","url":"/api/v1/users/register","status":"500","responseTi
 info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2958.472"} {"timestamp":"2024-11-21T13:01:41.324Z"}
 info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3588.775"} {"timestamp":"2024-11-21T13:09:33.790Z"}
 info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2830.084"} {"timestamp":"2024-11-21T13:14:30.068Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3349.868"} {"timestamp":"2024-11-28T14:35:48.861Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3198.370"} {"timestamp":"2024-11-28T14:39:55.715Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3028.347"} {"timestamp":"2024-11-28T14:41:01.868Z"}
+error: Error: 400 - email has an error: Invalid email, password has an error: String must contain at least 7 character(s) - Error: email has an error: Invalid email, password has an error: String must contain at least 7 character(s)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21) {"timestamp":"2024-11-28T14:45:58.262Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"400","responseTime":"30.842"} {"timestamp":"2024-11-28T14:45:58.267Z"}
+error: Error: 400 - email has an error: Invalid email, password has an error: String must contain at least 7 character(s) - Error: email has an error: Invalid email, password has an error: String must contain at least 7 character(s)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21) {"timestamp":"2024-11-28T14:46:05.889Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"400","responseTime":"11.018"} {"timestamp":"2024-11-28T14:46:05.895Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3526.193"} {"timestamp":"2024-11-28T14:54:19.249Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2090.369"} {"timestamp":"2024-11-28T15:09:33.958Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"3199.995"} {"timestamp":"2024-11-28T15:11:10.959Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"4522.421"} {"timestamp":"2024-11-28T15:12:27.665Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2293.083"} {"timestamp":"2024-11-28T15:14:17.440Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"1934.693"} {"timestamp":"2024-11-28T15:19:50.580Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2367.252"} {"timestamp":"2024-11-28T15:39:28.560Z"}

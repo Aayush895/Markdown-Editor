@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import style from './Signup.module.css'
 import { useRegisterUser } from '../../Hooks/customFetchHooks'
 import { toast } from 'react-toastify'
+import Loader from '../Util-Components/Loader'
 
 function Signup() {
   const [userObj, setuserObj] = useState({
@@ -12,7 +13,7 @@ function Signup() {
   })
 
   const fileInputRef = useRef(null)
-  const { registerUser } = useRegisterUser()
+  const { registerUser, isPending } = useRegisterUser()
 
   function handleInputChange(e) {
     const { name, value } = e.target
@@ -50,13 +51,14 @@ function Signup() {
           profilePic: '',
         })
         fileInputRef.current.value = ''
-        toast.success('User registered!')
+        return toast.success('User registered!')
       },
     })
   }
 
   return (
     <div id={style.signupContainer}>
+      {isPending && <Loader />}
       <div id={style.signupFormContainer}>
         <div id={style.formHeader}>
           <h1>Welcome to Markdown editor</h1>
@@ -95,7 +97,9 @@ function Signup() {
             ref={fileInputRef}
           />
 
-          <button type="submit">Sign Up</button>
+          <button type="submit" disabled={isPending}>
+            Sign Up
+          </button>
         </form>
       </div>
     </div>

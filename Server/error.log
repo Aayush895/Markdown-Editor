@@ -323,3 +323,23 @@ error: Error: 500 - An unexpected error occurred. Please try again later. - Erro
     at registerUserService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/userService.js:59:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async registerUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:14:26) {"timestamp":"2024-11-21T13:00:25.642Z"}
+error: Error: 400 - email has an error: Invalid email, password has an error: String must contain at least 7 character(s) - Error: email has an error: Invalid email, password has an error: String must contain at least 7 character(s)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21) {"timestamp":"2024-11-28T14:45:58.262Z"}
+error: Error: 400 - email has an error: Invalid email, password has an error: String must contain at least 7 character(s) - Error: email has an error: Invalid email, password has an error: String must contain at least 7 character(s)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:36:26)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:511:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21) {"timestamp":"2024-11-28T14:46:05.889Z"}
