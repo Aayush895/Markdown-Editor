@@ -167,3 +167,8 @@ export { healthCheck }
 **Optional Features to work on in the feature to enhance knowledge**
 
 - Different users should be able to collaborate on the docs when given permission.(Kind of like google docs. If one person makes changes in the docs from their side then the other user should be able to view those changes in the docs as well live)
+
+- Test user
+test-user
+test@gmail.com
+test123

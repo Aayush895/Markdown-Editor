@@ -1,5 +1,5 @@
 import { QueryClient, useMutation } from '@tanstack/react-query'
-import { customFetch } from '../../utils'
+import { customFetch, customLoginFetcher } from '../../utils'
 import { toast } from 'react-toastify'
 
 export function useRegisterUser() {
@@ -24,4 +24,23 @@ export function useRegisterUser() {
   })
 
   return { registerUser, isPending }
+}
+
+export function useLogin() {
+  const queryClient = new QueryClient()
+  const { mutate: loginUser, isPending } = useMutation({
+    mutationFn: (userInfo) => {
+      console.log(userInfo);
+      return customLoginFetcher.post('/users/login', userInfo)
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] })
+    },
+    onError: (error) => {
+      const errorMsg = error.response?.data?.msg || error.message
+      return toast.error(errorMsg)
+    },
+  })
+
+  return { loginUser, isPending }
 }
