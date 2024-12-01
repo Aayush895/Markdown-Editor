@@ -1,12 +1,13 @@
 import { StatusCodes } from "http-status-codes";
+import jwt from 'jsonwebtoken'
 import {
   registerUserService,
   loginUserService,
   refreshAccessTokenService,
 } from "../services/userService.js";
 import generateAccessRefreshToken from "../utils/generateAccessAndRefreshTokens.js";
-import { User } from "../models/users.models.js";
 import ApiError from "../utils/ApiError.js";
+import { ACCESS_TOKEN_SECRET } from "../config/serverConfig.js";
 
 // User registeration controller
 export async function registerUser(req, res, next) {
@@ -48,11 +49,11 @@ export async function loginUser(req, res, next) {
 
     return res
       .status(StatusCodes.OK)
-      .cookie("accessToken", accessToken, options)
       .cookie("refreshToken", refreshToken, options)
       .json({
         success: true,
         data: incomingResponseData,
+        accessToken,
         message: "User logged in successfully",
       });
   } catch (error) {
@@ -67,8 +68,6 @@ export async function logoutUser(req, res, next) {
       httpOnly: true,
       secure: true,
     };
-
-    res.clearCookie("accessToken", options);
     res.clearCookie("refreshToken", options);
 
     return res.status(StatusCodes.OK).json({
@@ -98,17 +97,25 @@ export async function refreshAccessToken(req, res, next) {
       secure: true,
     };
 
-    return res
-      .status(200)
-      .cookie("accessToken", accessToken, options)
-      .cookie("refreshToken", refreshToken, options)
-      .json({
-        success: true,
-        message: "Access token refreshed",
-        accessToken,
-        refreshToken,
-      });
+    return res.status(200).cookie("refreshToken", refreshToken, options).json({
+      success: true,
+      message: "Access token refreshed",
+      accessToken,
+    });
   } catch (error) {
     next(error);
   }
+}
+
+export async function userTokenAuth(req, res, next) {
+  const token = req.body.accessToken
+
+  const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET)
+  const user = await fetchUserbyId(decodeToken._id);
+
+  return res.status(StatusCodes.OK).json({
+    success: true,
+    data: user,
+    message: "User is authorized"
+  })
 }

@@ -12,6 +12,8 @@ function Login() {
     password: '',
   })
 
+  const [accessToken, setaccessToken] = useState(null)
+
   const { loginUser, isPending, data } = useLogin()
 
   function handleInputChange(e) {
@@ -39,7 +41,8 @@ function Login() {
       },
     })
   }
-  console.log(data)
+  console.log(data?.data?.accessToken)
+  
   return (
     <div id={style.loginContainer}>
       {isPending && <Loader />}

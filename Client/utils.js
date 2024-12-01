@@ -15,3 +15,12 @@ export const customLoginFetcher = axios.create({
     'Content-Type': 'application/json',
   },
 })
+
+// Custom protected routes fetcher
+export const customProtectedFetcher = axios.create({
+  baseURL: 'http://localhost:3002/api/v1',
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})

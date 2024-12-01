@@ -1,6 +1,6 @@
 import express, { urlencoded } from "express";
 import cors from "cors";
-import cookieParser from 'cookie-parser'
+import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import logger from "../logs/logger.js";
 import apiRouter from "./routes/apiRoutes.js";
@@ -17,8 +17,8 @@ app.use(
   })
 );
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({credentials: true}));
-app.use(cookieParser())
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cookieParser());
 app.use(
   morgan(morganFormat, {
     stream: {
@@ -36,7 +36,7 @@ app.use(
 );
 
 app.use("/api", apiRouter);
-app.use(errorMiddleware)
+app.use(errorMiddleware);
 
 app.listen(PORT, async () => {
   try {

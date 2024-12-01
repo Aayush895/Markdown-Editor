@@ -7,9 +7,8 @@ import {
   loginUser,
   logoutUser,
   refreshAccessToken,
+  userTokenAuth,
 } from "../../controllers/users.controller.js";
-import { jwtValidation } from "../../middlewares/jwtValidationMiddleware.js";
-import { jwtUserVaidation } from "../../middlewares/jwtUserAuth.js";
 
 const router = express.Router();
 
@@ -24,6 +23,6 @@ router.post(
 router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
 router.post("/logout", logoutUser);
 router.post("/refresh-token", refreshAccessToken);
-router.get("/check", jwtUserVaidation)
+router.get("/check", userTokenAuth)
 
 export default router;

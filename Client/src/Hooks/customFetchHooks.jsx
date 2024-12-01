@@ -1,10 +1,18 @@
-import { QueryClient, useMutation } from '@tanstack/react-query'
-import { customFetch, customLoginFetcher } from '../../utils'
+import { QueryClient, useMutation, useQuery } from '@tanstack/react-query'
+import {
+  customFetch,
+  customLoginFetcher,
+  customProtectedFetcher,
+} from '../../utils'
 import { toast } from 'react-toastify'
 
 export function useRegisterUser() {
   const queryClient = new QueryClient()
-  const { mutate: registerUser, isPending, data } = useMutation({
+  const {
+    mutate: registerUser,
+    isPending,
+    data,
+  } = useMutation({
     mutationFn: (user) => {
       const formData = new FormData()
       formData.append('username', user.username)
@@ -28,7 +36,11 @@ export function useRegisterUser() {
 
 export function useLogin() {
   const queryClient = new QueryClient()
-  const { mutate: loginUser, isPending, data } = useMutation({
+  const {
+    mutate: loginUser,
+    isPending,
+    data,
+  } = useMutation({
     mutationFn: (userInfo) => {
       console.log(userInfo)
       return customLoginFetcher.post('/users/login', userInfo)
@@ -43,4 +55,16 @@ export function useLogin() {
   })
 
   return { loginUser, isPending, data }
+}
+
+export function useAuth() {
+  const { data, isError } = useQuery({
+    queryKey: ['users'],
+    queryFn: async () => {
+      const { data } = await customProtectedFetcher.get('/users/check')
+      return data
+    },
+  })
+
+  return { data, isError }
 }
