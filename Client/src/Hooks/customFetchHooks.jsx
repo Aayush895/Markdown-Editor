@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 
 export function useRegisterUser() {
   const queryClient = new QueryClient()
-  const { mutate: registerUser, isPending } = useMutation({
+  const { mutate: registerUser, isPending, data } = useMutation({
     mutationFn: (user) => {
       const formData = new FormData()
       formData.append('username', user.username)
@@ -23,14 +23,14 @@ export function useRegisterUser() {
     },
   })
 
-  return { registerUser, isPending }
+  return { registerUser, isPending, data }
 }
 
 export function useLogin() {
   const queryClient = new QueryClient()
-  const { mutate: loginUser, isPending } = useMutation({
+  const { mutate: loginUser, isPending, data } = useMutation({
     mutationFn: (userInfo) => {
-      console.log(userInfo);
+      console.log(userInfo)
       return customLoginFetcher.post('/users/login', userInfo)
     },
     onSuccess: () => {
@@ -42,5 +42,5 @@ export function useLogin() {
     },
   })
 
-  return { loginUser, isPending }
+  return { loginUser, isPending, data }
 }

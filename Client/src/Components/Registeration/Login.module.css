@@ -50,6 +50,20 @@
   transform: scale(1.15);
 }
 
+.buttonText {
+  text-decoration: none;
+  color: white;
+}
+
 #loginFormContainer > p {
   margin: 1rem;
+}
+
+.signupLink {
+  text-decoration: none;
+  color: var(--orange1);
+}
+
+.signupLink:hover {
+  text-decoration: underline;
 }

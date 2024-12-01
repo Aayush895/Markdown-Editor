@@ -3,6 +3,7 @@ import Loader from '../Util-Components/Loader'
 import style from './Login.module.css'
 import { useLogin } from '../../Hooks/customFetchHooks'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const [userInfo, setuserInfo] = useState({
@@ -11,7 +12,7 @@ function Login() {
     password: '',
   })
 
-  const { loginUser, isPending } = useLogin()
+  const { loginUser, isPending, data } = useLogin()
 
   function handleInputChange(e) {
     setuserInfo({
@@ -38,7 +39,7 @@ function Login() {
       },
     })
   }
-
+  console.log(data)
   return (
     <div id={style.loginContainer}>
       {isPending && <Loader />}
@@ -75,7 +76,12 @@ function Login() {
           <button type="submit">Login</button>
         </form>
         <p>
-          Don&apos;t have an account? <span>Sign up</span>
+          Don&apos;t have an account?{' '}
+          <span>
+            <Link to="/signup" className={style.signupLink}>
+              Sign up
+            </Link>
+          </span>
         </p>
       </div>
     </div>

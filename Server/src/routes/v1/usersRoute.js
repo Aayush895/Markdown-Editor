@@ -8,6 +8,8 @@ import {
   logoutUser,
   refreshAccessToken,
 } from "../../controllers/users.controller.js";
+import { jwtValidation } from "../../middlewares/jwtValidationMiddleware.js";
+import { jwtUserVaidation } from "../../middlewares/jwtUserAuth.js";
 
 const router = express.Router();
 
@@ -22,5 +24,6 @@ router.post(
 router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
 router.post("/logout", logoutUser);
 router.post("/refresh-token", refreshAccessToken);
+router.get("/check", jwtUserVaidation)
 
 export default router;
