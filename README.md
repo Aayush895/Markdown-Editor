@@ -19,6 +19,8 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
   - [Acknowledgments](#acknowledgments)
 - [Features built so far](#features-built-so-far)
 - [Features to work on](#features-to-work-on)
+- [Steps for protected component in react](#steps-for-protected-component-in-react)
+- [Tomorrows TODO:](#tomorrows-todo)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -169,6 +171,17 @@ export { healthCheck }
 - Different users should be able to collaborate on the docs when given permission.(Kind of like google docs. If one person makes changes in the docs from their side then the other user should be able to view those changes in the docs as well live)
 
 - Test user
-test-user
-test@gmail.com
-test123
+  test-user
+  test@gmail.com
+  test123
+
+# Steps for protected component in react
+
+- First login and store the access token in-memory(react-context) --> Done
+- Now when clicked on login, it should take us to `MarkdownEditor` component --> Done
+- The component is protected so before rendering we will pass another reqeuest to check if the token is valid or not. If it's valid go to the `/markdown` route but if it's not then first refresh the token to generate new refresh and access tokens. Also check if the access token is expired or not. If it is expired then generate a new access token using the refresh token but if both are expired then just redirect to the login page. If the user logs in again then both the tokens are generated again.
+- Similar steps will be followed for all the other protected components
+
+# Tomorrows TODO:
+
+- Have to now handle the component for when access token is expired and when both access and refresh token expire

@@ -1,8 +1,7 @@
-import { QueryClient, useMutation, useQuery } from '@tanstack/react-query'
+import { QueryClient, useMutation } from '@tanstack/react-query'
 import {
   customFetch,
   customLoginFetcher,
-  customProtectedFetcher,
 } from '../../utils'
 import { toast } from 'react-toastify'
 
@@ -42,7 +41,6 @@ export function useLogin() {
     data,
   } = useMutation({
     mutationFn: (userInfo) => {
-      console.log(userInfo)
       return customLoginFetcher.post('/users/login', userInfo)
     },
     onSuccess: () => {
@@ -58,13 +56,23 @@ export function useLogin() {
 }
 
 export function useAuth() {
-  const { data, isError } = useQuery({
-    queryKey: ['users'],
-    queryFn: async () => {
-      const { data } = await customProtectedFetcher.get('/users/check')
-      return data
+  const queryClient = new QueryClient()
+  const {
+    mutate: checkUser,
+    isPending,
+    data,
+  } = useMutation({
+    mutationFn: (accessToken) => {
+      return customLoginFetcher.post('/users/check', {accessToken})
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] })
+    },
+    onError: (error) => {
+      const errorMsg = error.response?.data?.msg || error.message
+      return toast.error(errorMsg)
     },
   })
 
-  return { data, isError }
+  return { checkUser, isPending, data }
 }

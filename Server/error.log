@@ -1795,3 +1795,50 @@ error: Error: 401 - Token not received - Error: Token not received
     at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
     at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
     at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-01T16:41:35.327Z"}
+error: Error: 400 - Unexpected token 'n', "null" is not valid JSON - SyntaxError: Unexpected token 'n', "null" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:86:15)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:238:16)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:511:28)
+    at endReadableNT (node:internal/streams/readable:1367:12) {"timestamp":"2024-12-02T13:53:29.207Z"}
+error: Error: 400 - Unexpected token 'n', "null" is not valid JSON - SyntaxError: Unexpected token 'n', "null" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:86:15)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:238:16)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:511:28)
+    at endReadableNT (node:internal/streams/readable:1367:12) {"timestamp":"2024-12-02T13:53:29.211Z"}
+error: Error: 400 - Unexpected token 'n', "null" is not valid JSON - SyntaxError: Unexpected token 'n', "null" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:86:15)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:238:16)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:511:28)
+    at endReadableNT (node:internal/streams/readable:1367:12) {"timestamp":"2024-12-02T13:55:50.837Z"}
+error: Error: 400 - Unexpected token 'n', "null" is not valid JSON - SyntaxError: Unexpected token 'n', "null" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/types/json.js:86:15)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:238:16)
+    at done (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:511:28)
+    at endReadableNT (node:internal/streams/readable:1367:12) {"timestamp":"2024-12-02T13:55:50.844Z"}
+error: Error: 500 - An unexpected error occurred. Please try again later. - Error: An unexpected error occurred. Please try again later.
+    at loginUserService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/userService.js:92:13)
+    at async loginUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:36:34) {"timestamp":"2024-12-02T14:50:24.385Z"}

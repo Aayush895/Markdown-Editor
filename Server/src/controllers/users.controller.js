@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import jwt from 'jsonwebtoken'
+import jwt from "jsonwebtoken";
 import {
   registerUserService,
   loginUserService,
@@ -8,6 +8,7 @@ import {
 import generateAccessRefreshToken from "../utils/generateAccessAndRefreshTokens.js";
 import ApiError from "../utils/ApiError.js";
 import { ACCESS_TOKEN_SECRET } from "../config/serverConfig.js";
+import { fetchUserbyId } from "../repository/userRepository.js";
 
 // User registeration controller
 export async function registerUser(req, res, next) {
@@ -107,15 +108,24 @@ export async function refreshAccessToken(req, res, next) {
   }
 }
 
+// Token auth for protected routes in client side
 export async function userTokenAuth(req, res, next) {
-  const token = req.body.accessToken
+  try {
+    const token = req.body.accessToken;
 
-  const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET)
-  const user = await fetchUserbyId(decodeToken._id);
+    if (!token) {
+      throw new ApiError("Token not received", StatusCodes.UNAUTHORIZED);
+    }
 
-  return res.status(StatusCodes.OK).json({
-    success: true,
-    data: user,
-    message: "User is authorized"
-  })
+    const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET);
+    const user = await fetchUserbyId(decodeToken._id);
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      data: user,
+      message: "User is authorized",
+    });
+  } catch (error) {
+    next(error);
+  }
 }

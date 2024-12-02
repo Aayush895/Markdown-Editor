@@ -1,19 +1,20 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Loader from '../Util-Components/Loader'
 import style from './Login.module.css'
 import { useLogin } from '../../Hooks/customFetchHooks'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../AuthContext'
 
 function Login() {
+  const navigate = useNavigate() 
   const [userInfo, setuserInfo] = useState({
     username: '',
     email: '',
     password: '',
   })
-
-  const [accessToken, setaccessToken] = useState(null)
-
+  const { setaccessToken } = useContext(AuthContext)
   const { loginUser, isPending, data } = useLogin()
 
   function handleInputChange(e) {
@@ -37,11 +38,19 @@ function Login() {
           password: '',
         })
 
-        return toast.success('User logged in successfully!')
+        navigate('/markdown')
+        // return toast.success('User logged in successfully!')
       },
     })
   }
-  console.log(data?.data?.accessToken)
+
+  useEffect(() => {
+    if(data && data?.data?.accessToken) {
+      setaccessToken(data?.data?.accessToken)
+    }
+  }, [data, setaccessToken])
+
+  // console.log(accessToken);
   
   return (
     <div id={style.loginContainer}>

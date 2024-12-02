@@ -23,6 +23,6 @@ router.post(
 router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
 router.post("/logout", logoutUser);
 router.post("/refresh-token", refreshAccessToken);
-router.get("/check", userTokenAuth)
+router.post("/check", userTokenAuth)
 
 export default router;
