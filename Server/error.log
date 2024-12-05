@@ -1842,3 +1842,83 @@ error: Error: 400 - Unexpected token 'n', "null" is not valid JSON - SyntaxError
 error: Error: 500 - An unexpected error occurred. Please try again later. - Error: An unexpected error occurred. Please try again later.
     at loginUserService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/userService.js:92:13)
     at async loginUser (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:36:34) {"timestamp":"2024-12-02T14:50:24.385Z"}
+error: Error: 401 - Token not received - Error: Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:117:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-05T12:23:54.987Z"}
+error: Error: 401 - Token not received - Error: Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:117:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-05T12:23:54.991Z"}
+error: Error: 401 - Token not received - Error: Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:117:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-05T12:24:47.473Z"}
+error: Error: 401 - Token not received - Error: Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:117:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-05T12:24:47.484Z"}
+error: Error: 500 - Date.now(...).getHours is not a function - TypeError: Date.now(...).getHours is not a function
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:11:50.590Z"}
+error: Error: 500 - Date.now(...).getHours is not a function - TypeError: Date.now(...).getHours is not a function
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:11:50.596Z"}
+error: Error: 500 - Date.getHours is not a function - TypeError: Date.getHours is not a function
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:12:02.323Z"}
+error: Error: 500 - Date.getHours is not a function - TypeError: Date.getHours is not a function
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:12:02.330Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:15:58.121Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:15:58.128Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:16:03.717Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:123:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:16:03.723Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:17:15.531Z"}
+error: Error: 500 - Incorrect locale information provided - RangeError: Incorrect locale information provided
+    at Date.toLocaleTimeString (<anonymous>)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-05T13:17:15.539Z"}

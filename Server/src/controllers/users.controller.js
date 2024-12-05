@@ -117,7 +117,14 @@ export async function userTokenAuth(req, res, next) {
       throw new ApiError("Token not received", StatusCodes.UNAUTHORIZED);
     }
 
-    const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET);
+    const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET, {
+      ignoreExpiration: false,
+    });
+
+    if (decodeToken.exp && Date.now() >= decodeToken.exp * 1000) {
+      throw new ApiError("Token has expired", StatusCodes.UNAUTHORIZED);
+    }
+
     const user = await fetchUserbyId(decodeToken._id);
 
     return res.status(StatusCodes.OK).json({

@@ -3,7 +3,7 @@ import { AuthContext } from './AuthContext'
 import Container from './Components/Container'
 
 function App() {
-  const [accessToken, setaccessToken] = useState(null)
+  const [accessToken, setaccessToken] = useState(localStorage.getItem("accessToken") || null)
   return (
     <>
       <AuthContext.Provider value={{ accessToken, setaccessToken }}>

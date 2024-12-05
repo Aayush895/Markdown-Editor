@@ -39,7 +39,6 @@ function Login() {
         })
 
         navigate('/markdown')
-        // return toast.success('User logged in successfully!')
       },
     })
   }
@@ -47,10 +46,9 @@ function Login() {
   useEffect(() => {
     if(data && data?.data?.accessToken) {
       setaccessToken(data?.data?.accessToken)
+      localStorage.setItem("accessToken", data?.data?.accessToken)
     }
   }, [data, setaccessToken])
-
-  // console.log(accessToken);
   
   return (
     <div id={style.loginContainer}>
