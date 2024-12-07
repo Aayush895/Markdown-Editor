@@ -55,9 +55,10 @@ export function useAuth() {
     isPending,
     isError,
     data,
+    error
   } = useMutation({
-    mutationFn: (accessToken) => {
-      return customLoginFetcher.post('/users/check', { accessToken })
+    mutationFn: async (accessToken) => {
+      return await customLoginFetcher.post('/users/check', { accessToken })
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['users'] })
@@ -68,5 +69,5 @@ export function useAuth() {
     },
   })
 
-  return { checkUser, isPending, isError, data }
+  return { checkUser, isPending, isError, data, error }
 }

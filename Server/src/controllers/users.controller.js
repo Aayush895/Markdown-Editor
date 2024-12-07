@@ -118,7 +118,7 @@ export async function userTokenAuth(req, res, next) {
     }
 
     const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET, {
-      ignoreExpiration: false,
+      ignoreExpiration: true,
     });
 
     if (decodeToken.exp && Date.now() >= decodeToken.exp * 1000) {
@@ -129,7 +129,7 @@ export async function userTokenAuth(req, res, next) {
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      data: user,
+      data: {},
       message: "User is authorized",
     });
   } catch (error) {

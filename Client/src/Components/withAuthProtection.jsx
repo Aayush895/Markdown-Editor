@@ -9,30 +9,45 @@ function withAuthProtection(Component) {
     const { accessToken } = useContext(AuthContext)
     const navigate = useNavigate()
 
-    const { checkUser, isPending, data } = useAuth()
+    const { checkUser, isPending, data, error } = useAuth()
 
     useEffect(() => {
-      let isComponentMounted = true
-
       if (!accessToken) {
         navigate('/login')
-        return () => {
-          isComponentMounted = false
+        return
+      }
+
+      function handleTokenExpiration() {
+        localStorage.removeItem('accessToken')
+        navigate('/login')
+      }
+
+      function initialCheck() {
+        console.log('RUNNING INTIAL CHECK')
+        if (error?.status == 401) {
+          handleTokenExpiration()
+          return
         }
       }
 
-      if(isComponentMounted) checkUser(accessToken)
+      initialCheck()
+
+      const checkUserIntervalId = setInterval(() => {
+        console.log('RUNNING INTERVAL CHECKS')
+        checkUser(accessToken)
+      }, 15000)
 
       return () => {
-        isComponentMounted = false
+        clearInterval(checkUserIntervalId)
       }
-    }, [accessToken, checkUser, navigate])
+    }, [accessToken, checkUser, navigate, error])
 
-    console.log(data)
     if (isPending) {
       return <Loader />
     }
 
+    console.log(data);
+    
     return <Component />
   }
 }
