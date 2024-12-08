@@ -11,6 +11,7 @@ export const customFetch = axios.create({
 // Explicitly accepts only data which is sent as raw or converted to json and then sent to server
 export const customLoginFetcher = axios.create({
   baseURL: 'http://localhost:3002/api/v1',
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
   },

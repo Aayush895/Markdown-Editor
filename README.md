@@ -21,7 +21,6 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [Features to work on](#features-to-work-on)
 - [Steps for protected component in react](#steps-for-protected-component-in-react)
 - [Tomorrows TODO:](#tomorrows-todo)
-- [Possible logic for handling refresh token](#possible-logic-for-handling-refresh-token)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -186,11 +185,5 @@ export { healthCheck }
 # Tomorrows TODO:
 
 - Have to now handle the component for when access token is expired --> Done
-- Have to now handle when both access and refresh tokens are expired
+- Have to now handle when both access and refresh tokens are expired --> Done
 - Read about the useEffect cleanup function --> [React useEffect cleanup](https://medium.com/@vishalkalia.er/what-is-the-useeffect-cleanup-function-and-how-it-works-83d8c67a1a10)
-
-# Possible logic for handling refresh token
-
-- When user checks for accessToken validation we also check for refresh token validation
-- if refresh token is expired we immedidately return an error and send a request to the `/refresh` route
-- Once we return new refresh and access tokens we override the exisiting accessToken with the new one and again the accessToken validation. If successful take to the `/markdown` route again

@@ -7,7 +7,10 @@ import {
 } from "../services/userService.js";
 import generateAccessRefreshToken from "../utils/generateAccessAndRefreshTokens.js";
 import ApiError from "../utils/ApiError.js";
-import { ACCESS_TOKEN_SECRET } from "../config/serverConfig.js";
+import {
+  ACCESS_TOKEN_SECRET,
+  REFRESH_TOKEN_SECRET,
+} from "../config/serverConfig.js";
 import { fetchUserbyId } from "../repository/userRepository.js";
 
 // User registeration controller
@@ -81,28 +84,29 @@ export async function logoutUser(req, res, next) {
 }
 
 // Refresh access token
-export async function refreshAccessToken(req, res, next) {
+async function refreshAccessToken(req, res, next) {
   try {
     const incomingRefreshToken =
       req.cookies.refreshToken || req.body.refreshToken;
 
     if (!incomingRefreshToken) {
-      throw new ApiError("Unauthorized Access", StatusCodes.UNAUTHORIZED);
+      throw new ApiError(
+        "Refresh token not received",
+        StatusCodes.UNAUTHORIZED
+      );
     }
 
-    // Below are the newly generated access and refresh tokens
-    const { accessToken, refreshToken } =
-      await refreshAccessTokenService(incomingRefreshToken);
-    const options = {
-      httpOnly: true,
-      secure: true,
-    };
+    // New logic for generating the access token:
+    const decoded = await jwt.verify(
+      incomingRefreshToken,
+      REFRESH_TOKEN_SECRET
+    );
 
-    return res.status(200).cookie("refreshToken", refreshToken, options).json({
-      success: true,
-      message: "Access token refreshed",
-      accessToken,
-    });
+    const user = await fetchUserbyId(decoded._id);
+    const newAccessToken = await user.generateAccessToken();
+    console.log("New token: ", newAccessToken);
+
+    return newAccessToken;
   } catch (error) {
     next(error);
   }
@@ -112,20 +116,40 @@ export async function refreshAccessToken(req, res, next) {
 export async function userTokenAuth(req, res, next) {
   try {
     const token = req.body.accessToken;
+    const incomingRefreshToken = req.cookies.refreshToken;
 
     if (!token) {
-      throw new ApiError("Token not received", StatusCodes.UNAUTHORIZED);
+      throw new ApiError("Access Token not received", StatusCodes.UNAUTHORIZED);
+    }
+
+    if(!incomingRefreshToken) {
+      throw new ApiError("Refresh Token not received", StatusCodes.UNAUTHORIZED)
     }
 
     const decodeToken = await jwt.verify(token, ACCESS_TOKEN_SECRET, {
       ignoreExpiration: true,
     });
 
+    const decodeRefreshToken = await jwt.verify(incomingRefreshToken, REFRESH_TOKEN_SECRET, {
+      ignoreExpiration: true,
+    });
+
     if (decodeToken.exp && Date.now() >= decodeToken.exp * 1000) {
-      throw new ApiError("Token has expired", StatusCodes.UNAUTHORIZED);
+      const newAccessToken = await refreshAccessToken(req, res, next);
+      if (newAccessToken) {
+        return res.status(StatusCodes.OK).json({
+          success: true,
+          newAccessToken,
+          message: "New token generated",
+        });
+      } else {
+        throw new ApiError("Token has expired", StatusCodes.UNAUTHORIZED);
+      }
     }
 
-    const user = await fetchUserbyId(decodeToken._id);
+    if(decodeRefreshToken.exp && Date.now() >= decodeRefreshToken.exp * 1000) {
+      throw new ApiError("Refresh token has expired", StatusCodes.UNAUTHORIZED);
+    } 
 
     return res.status(StatusCodes.OK).json({
       success: true,

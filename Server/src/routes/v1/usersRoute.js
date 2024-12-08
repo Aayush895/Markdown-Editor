@@ -6,7 +6,6 @@ import {
   registerUser,
   loginUser,
   logoutUser,
-  refreshAccessToken,
   userTokenAuth,
 } from "../../controllers/users.controller.js";
 
@@ -22,7 +21,6 @@ router.post(
 
 router.post("/login", validateRequestData(userRegisterationSchema), loginUser);
 router.post("/logout", logoutUser);
-router.post("/refresh-token", refreshAccessToken);
-router.post("/check", userTokenAuth)
+router.post("/check", userTokenAuth);
 
 export default router;

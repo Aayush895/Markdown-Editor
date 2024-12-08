@@ -4345,3 +4345,92 @@ error: Error: 401 - Token has expired - Error: Token has expired
 error: Error: 401 - Token has expired - Error: Token has expired
     at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-07T21:24:57.484Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:29:31.894Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:30:01.925Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:30:59.225Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:14.233Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:29.231Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:44.220Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:59.228Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:14.215Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:29.219Z"}
+error: Error: 401 - Refresh token not received - Error: Refresh token not received
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:44.257Z"}
+error: Error: 401 - Refresh token not received - Error: Refresh token not received
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:59.211Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:14.508Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:29.552Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:44.583Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:59.637Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:14.717Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:29.749Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:52.934Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:21:07.991Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:22:02.940Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:22:41.947Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:30:52.404Z"}

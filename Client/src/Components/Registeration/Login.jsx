@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../AuthContext'
 
 function Login() {
-  const navigate = useNavigate() 
+  const navigate = useNavigate()
   const [userInfo, setuserInfo] = useState({
     username: '',
     email: '',
@@ -44,12 +44,12 @@ function Login() {
   }
 
   useEffect(() => {
-    if(data && data?.data?.accessToken) {
+    if (data && data?.data?.accessToken) {
       setaccessToken(data?.data?.accessToken)
-      localStorage.setItem("accessToken", data?.data?.accessToken)
+      localStorage.setItem('accessToken', data?.data?.accessToken)
     }
   }, [data, setaccessToken])
-  
+
   return (
     <div id={style.loginContainer}>
       {isPending && <Loader />}

@@ -7186,3 +7186,186 @@ error: Error: 401 - Token has expired - Error: Token has expired
     at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-07T21:24:57.484Z"}
 info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"4.077"} {"timestamp":"2024-12-07T21:24:57.485Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"374.662"} {"timestamp":"2024-12-08T10:25:51.128Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"19.739"} {"timestamp":"2024-12-08T10:26:06.181Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"12.369"} {"timestamp":"2024-12-08T10:28:46.843Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"17.383"} {"timestamp":"2024-12-08T10:29:16.893Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"8.038"} {"timestamp":"2024-12-08T10:29:31.889Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:29:31.894Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"9.572"} {"timestamp":"2024-12-08T10:30:01.920Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:30:01.925Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"370.065"} {"timestamp":"2024-12-08T10:30:44.184Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"10.917"} {"timestamp":"2024-12-08T10:30:59.221Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:30:59.225Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"5.800"} {"timestamp":"2024-12-08T10:31:14.215Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:14.233Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.802"} {"timestamp":"2024-12-08T10:31:29.227Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:29.231Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"4.986"} {"timestamp":"2024-12-08T10:31:44.214Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:44.220Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"3.525"} {"timestamp":"2024-12-08T10:31:59.222Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:31:59.228Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"3.869"} {"timestamp":"2024-12-08T10:32:14.213Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:14.215Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"9.810"} {"timestamp":"2024-12-08T10:32:29.218Z"}
+error: Error: 401 - Unauthorized Access - Error: Unauthorized Access
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:29.219Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"9.600"} {"timestamp":"2024-12-08T10:32:44.251Z"}
+error: Error: 401 - Refresh token not received - Error: Refresh token not received
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:44.257Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"4.866"} {"timestamp":"2024-12-08T10:32:59.207Z"}
+error: Error: 401 - Refresh token not received - Error: Refresh token not received
+    at refreshAccessToken (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:91:13)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:125:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T10:32:59.211Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"375.593"} {"timestamp":"2024-12-08T10:33:38.301Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"19.997"} {"timestamp":"2024-12-08T10:33:53.347Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"16.318"} {"timestamp":"2024-12-08T10:34:38.407Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"501.217"} {"timestamp":"2024-12-08T10:34:56.497Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"16.727"} {"timestamp":"2024-12-08T10:35:11.546Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"10.461"} {"timestamp":"2024-12-08T10:35:26.529Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"10.613"} {"timestamp":"2024-12-08T10:35:41.549Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"358.725"} {"timestamp":"2024-12-08T10:36:35.952Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"19.725"} {"timestamp":"2024-12-08T10:36:51.010Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"12.086"} {"timestamp":"2024-12-08T10:37:06.002Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"359.439"} {"timestamp":"2024-12-08T10:40:03.963Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"18.891"} {"timestamp":"2024-12-08T10:40:19.012Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"14.846"} {"timestamp":"2024-12-08T10:40:34.006Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"378.760"} {"timestamp":"2024-12-08T10:41:10.256Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"18.559"} {"timestamp":"2024-12-08T10:41:25.303Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"12.454"} {"timestamp":"2024-12-08T10:41:40.297Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"376.578"} {"timestamp":"2024-12-08T10:45:19.551Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"37.453"} {"timestamp":"2024-12-08T10:45:34.622Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"31.456"} {"timestamp":"2024-12-08T10:45:49.617Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"36.300"} {"timestamp":"2024-12-08T10:46:04.640Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"33.624"} {"timestamp":"2024-12-08T10:46:19.606Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"40.461"} {"timestamp":"2024-12-08T10:46:54.409Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"31.020"} {"timestamp":"2024-12-08T10:47:09.394Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"383.527"} {"timestamp":"2024-12-08T10:50:51.644Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"33.669"} {"timestamp":"2024-12-08T10:51:06.711Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"22.708"} {"timestamp":"2024-12-08T10:51:21.692Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"385.099"} {"timestamp":"2024-12-08T10:54:28.124Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"28.307"} {"timestamp":"2024-12-08T10:54:43.183Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"36.502"} {"timestamp":"2024-12-08T10:54:58.252Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"37.136"} {"timestamp":"2024-12-08T10:55:13.306Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"34.942"} {"timestamp":"2024-12-08T10:55:28.365Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"388.435"} {"timestamp":"2024-12-08T10:57:26.067Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"40.833"} {"timestamp":"2024-12-08T10:57:41.153Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"25.341"} {"timestamp":"2024-12-08T10:57:56.211Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"391.843"} {"timestamp":"2024-12-08T10:59:38.254Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"24.229"} {"timestamp":"2024-12-08T10:59:53.344Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"33.141"} {"timestamp":"2024-12-08T11:00:08.411Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"25.659"} {"timestamp":"2024-12-08T11:00:23.457Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"34.705"} {"timestamp":"2024-12-08T11:00:38.514Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"477.170"} {"timestamp":"2024-12-08T11:03:02.991Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"35.656"} {"timestamp":"2024-12-08T11:03:18.064Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"44.470"} {"timestamp":"2024-12-08T11:03:33.150Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"29.608"} {"timestamp":"2024-12-08T11:03:48.666Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"55.678"} {"timestamp":"2024-12-08T11:04:18.076Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"459.523"} {"timestamp":"2024-12-08T11:04:34.578Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"30.562"} {"timestamp":"2024-12-08T11:04:49.635Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"31.380"} {"timestamp":"2024-12-08T11:05:04.686Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"20.157"} {"timestamp":"2024-12-08T11:05:19.732Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"362.006"} {"timestamp":"2024-12-08T11:05:42.619Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"40.956"} {"timestamp":"2024-12-08T11:05:57.703Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"362.233"} {"timestamp":"2024-12-08T11:06:28.781Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"37.748"} {"timestamp":"2024-12-08T11:06:43.852Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"31.003"} {"timestamp":"2024-12-08T11:06:58.909Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"33.249"} {"timestamp":"2024-12-08T11:07:14.294Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"370.385"} {"timestamp":"2024-12-08T11:12:16.181Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"41.047"} {"timestamp":"2024-12-08T11:12:31.262Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"30.801"} {"timestamp":"2024-12-08T11:12:46.343Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"1644.467"} {"timestamp":"2024-12-08T11:18:48.023Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"377.267"} {"timestamp":"2024-12-08T11:18:59.466Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:14.508Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"500","responseTime":"15.549"} {"timestamp":"2024-12-08T11:19:14.512Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:29.552Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"500","responseTime":"17.529"} {"timestamp":"2024-12-08T11:19:29.556Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:44.583Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"500","responseTime":"13.355"} {"timestamp":"2024-12-08T11:19:44.591Z"}
+error: Error: 500 - invalid signature - JsonWebTokenError: invalid signature
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/jsonwebtoken/verify.js:101:10)
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:133:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:19:59.637Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"500","responseTime":"14.881"} {"timestamp":"2024-12-08T11:19:59.644Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:14.717Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"15.110"} {"timestamp":"2024-12-08T11:20:14.723Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:29.749Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"10.716"} {"timestamp":"2024-12-08T11:20:29.753Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:20:52.934Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"16.999"} {"timestamp":"2024-12-08T11:20:52.938Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:21:07.991Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"31.188"} {"timestamp":"2024-12-08T11:21:08.009Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"398.531"} {"timestamp":"2024-12-08T11:21:47.906Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:22:02.940Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"13.038"} {"timestamp":"2024-12-08T11:22:02.943Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"388.695"} {"timestamp":"2024-12-08T11:22:26.917Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:22:41.947Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"10.969"} {"timestamp":"2024-12-08T11:22:41.952Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"383.316"} {"timestamp":"2024-12-08T11:23:13.480Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"16.330"} {"timestamp":"2024-12-08T11:23:28.522Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"590.277"} {"timestamp":"2024-12-08T11:26:22.739Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.518"} {"timestamp":"2024-12-08T11:26:37.775Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"376.683"} {"timestamp":"2024-12-08T11:30:22.334Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.546"} {"timestamp":"2024-12-08T11:30:37.367Z"}
+error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:30:52.404Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"23.678"} {"timestamp":"2024-12-08T11:30:52.412Z"}
