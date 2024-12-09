@@ -14,7 +14,7 @@ function Login() {
     email: '',
     password: '',
   })
-  const { setaccessToken } = useContext(AuthContext)
+  const { setaccessToken, setuserData } = useContext(AuthContext)
   const { loginUser, isPending, data } = useLogin()
 
   function handleInputChange(e) {
@@ -48,7 +48,9 @@ function Login() {
       setaccessToken(data?.data?.accessToken)
       localStorage.setItem('accessToken', data?.data?.accessToken)
     }
-  }, [data, setaccessToken])
+
+    setuserData(data?.data?.data)
+  }, [data, setaccessToken, setuserData])
 
   return (
     <div id={style.loginContainer}>
@@ -88,7 +90,7 @@ function Login() {
         <p>
           Don&apos;t have an account?{' '}
           <span>
-            <Link to="/signup" className={style.signupLink}>
+            <Link to="/" className={style.signupLink}>
               Sign up
             </Link>
           </span>

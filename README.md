@@ -20,7 +20,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [Features built so far](#features-built-so-far)
 - [Features to work on](#features-to-work-on)
 - [Steps for protected component in react](#steps-for-protected-component-in-react)
-- [Tomorrows TODO:](#tomorrows-todo)
+- [TODO:](#todo)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -182,8 +182,7 @@ export { healthCheck }
 - The component is protected so before rendering we will pass another reqeuest to check if the token is valid or not. If it's valid go to the `/markdown` route but if it's not then first refresh the token to generate new refresh and access tokens. Also check if the access token is expired or not. If it is expired then generate a new access token using the refresh token but if both are expired then just redirect to the login page. If the user logs in again then both the tokens are generated again.
 - Similar steps will be followed for all the other protected components
 
-# Tomorrows TODO:
-
-- Have to now handle the component for when access token is expired --> Done
-- Have to now handle when both access and refresh tokens are expired --> Done
+# TODO:
+- Done with authentication system 
+- Now work on the markdown component
 - Read about the useEffect cleanup function --> [React useEffect cleanup](https://medium.com/@vishalkalia.er/what-is-the-useeffect-cleanup-function-and-how-it-works-83d8c67a1a10)

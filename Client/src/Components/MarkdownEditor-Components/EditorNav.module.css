@@ -1,0 +1,81 @@
+#navContainer {
+  border: 1px solid;
+  width: 100%;
+  background-color: var(--black4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto Mono', monospace;
+  padding: 0.5rem 0.5rem;
+}
+
+#navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navHeader > h1 {
+  letter-spacing: 0.5rem;
+}
+
+#expandableNavLogo {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+#navItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  width: 24rem;
+}
+
+#profileImg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+#profileImg > h1 {
+  margin-right: 3rem;
+}
+
+#profileImg > img {
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+}
+
+#navItems > img {
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+#navItems > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  background-color: var(--orange1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+#navItems > button:hover {
+  background-color: var(--orange2);
+}
+
+#navItems > button > span {
+  margin-right: 0.5rem;
+}

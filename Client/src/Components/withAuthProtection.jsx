@@ -10,7 +10,6 @@ function withAuthProtection(Component) {
     const navigate = useNavigate()
 
     const { checkUser, isPending, data, error } = useAuth()
-
     // After the initial render is done for the protected component we check if the users tokens are valid or not
     // If they are valid keep them in the page otherwise take them back to the login page
     useEffect(() => {
@@ -26,7 +25,6 @@ function withAuthProtection(Component) {
       }
 
       function initialCheck() {
-        console.log('RUNNING INTIAL CHECK')
         // Checking if the access token is generated or not
         if (
           data?.status == 200 &&
@@ -49,9 +47,8 @@ function withAuthProtection(Component) {
       initialCheck()
 
       const checkUserIntervalId = setInterval(() => {
-        console.log('RUNNING INTERVAL CHECKS')
         checkUser(accessToken)
-      }, 15000)
+      }, 30 * 60 * 1000)
 
       return () => {
         clearInterval(checkUserIntervalId)

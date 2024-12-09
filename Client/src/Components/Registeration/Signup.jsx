@@ -3,6 +3,7 @@ import style from './Signup.module.css'
 import { useRegisterUser } from '../../Hooks/customFetchHooks'
 import { toast } from 'react-toastify'
 import Loader from '../Util-Components/Loader'
+import { Link } from 'react-router-dom'
 
 function Signup() {
   const [userObj, setuserObj] = useState({
@@ -96,11 +97,16 @@ function Signup() {
             onChange={handleFile}
             ref={fileInputRef}
           />
-
           <button type="submit" disabled={isPending}>
             Sign Up
           </button>
         </form>
+        <p>
+          Don&apos;t have an account?{' '}
+          <span>
+            <Link to="/login" className={style.loginLink}>Login</Link>
+          </span>
+        </p>
       </div>
     </div>
   )

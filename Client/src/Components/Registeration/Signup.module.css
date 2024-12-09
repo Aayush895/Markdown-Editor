@@ -68,3 +68,16 @@
 #signupFormContainer > form > button:hover {
   transform: scale(1.15);
 }
+
+#signupFormContainer > p {
+  margin: 1.5rem 0;
+}
+
+.loginLink {
+  text-decoration: none;
+  color: var(--orange1);
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}

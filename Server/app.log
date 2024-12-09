@@ -7369,3 +7369,13 @@ error: Error: 401 - Refresh token has expired - Error: Refresh token has expired
     at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:151:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {"timestamp":"2024-12-08T11:30:52.404Z"}
 info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"23.678"} {"timestamp":"2024-12-08T11:30:52.412Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"559.639"} {"timestamp":"2024-12-09T15:11:05.647Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"10.164"} {"timestamp":"2024-12-09T15:11:20.706Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"6.301"} {"timestamp":"2024-12-09T15:11:35.729Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"6.996"} {"timestamp":"2024-12-09T15:11:51.174Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"8.013"} {"timestamp":"2024-12-09T15:12:07.171Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.609"} {"timestamp":"2024-12-09T15:12:23.173Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"5.045"} {"timestamp":"2024-12-09T15:12:39.167Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"15.311"} {"timestamp":"2024-12-09T15:43:11.469Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"460.370"} {"timestamp":"2024-12-09T15:49:14.643Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"430.702"} {"timestamp":"2024-12-09T15:55:00.746Z"}
