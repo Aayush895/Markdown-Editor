@@ -143,7 +143,7 @@ export async function userTokenAuth(req, res, next) {
           message: "New token generated",
         });
       } else {
-        throw new ApiError("Token has expired", StatusCodes.UNAUTHORIZED);
+        throw new ApiError("Access token has expired", StatusCodes.UNAUTHORIZED);
       }
     }
 

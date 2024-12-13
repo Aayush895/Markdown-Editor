@@ -37,6 +37,14 @@ function withAuthProtection(Component) {
 
         if (
           error?.status == 401 &&
+          error?.response?.data?.message == 'Access token has expired'
+        ) {
+          handleTokenExpiration()
+          return
+        }
+        
+        if (
+          error?.status == 401 &&
           error?.response?.data?.message == 'Refresh token has expired'
         ) {
           handleTokenExpiration()

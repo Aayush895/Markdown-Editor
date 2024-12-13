@@ -183,6 +183,5 @@ export { healthCheck }
 - Similar steps will be followed for all the other protected components
 
 # TODO:
-- Done with authentication system 
-- Now work on the markdown component
+- Start the work on the markdown component
 - Read about the useEffect cleanup function --> [React useEffect cleanup](https://medium.com/@vishalkalia.er/what-is-the-useeffect-cleanup-function-and-how-it-works-83d8c67a1a10)
