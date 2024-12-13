@@ -4,8 +4,7 @@ import { AuthContext } from '../../AuthContext'
 
 function EditorNav() {
   const {userData} = useContext(AuthContext)
-  console.log(userData);
-  
+
   return (
     <nav id={styles.navContainer}>
       <div id={styles.navHeader}>

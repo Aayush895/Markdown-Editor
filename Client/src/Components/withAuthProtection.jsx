@@ -67,8 +67,6 @@ function withAuthProtection(Component) {
       return <Loader />
     }
 
-    console.log(error)
-
     return <Component />
   }
 }

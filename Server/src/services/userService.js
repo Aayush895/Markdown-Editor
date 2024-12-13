@@ -121,7 +121,5 @@ export async function refreshAccessTokenService(incomingRefreshToken) {
     user._id
   );
 
-  console.log("Refresh token: ", refreshToken);
-
   return { accessToken, refreshToken };
 }

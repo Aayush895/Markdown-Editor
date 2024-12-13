@@ -7379,3 +7379,5 @@ info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime"
 info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"15.311"} {"timestamp":"2024-12-09T15:43:11.469Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"460.370"} {"timestamp":"2024-12-09T15:49:14.643Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"430.702"} {"timestamp":"2024-12-09T15:55:00.746Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"379.744"} {"timestamp":"2024-12-13T16:51:58.377Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"388.166"} {"timestamp":"2024-12-13T16:57:40.731Z"}

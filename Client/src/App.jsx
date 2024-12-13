@@ -6,7 +6,7 @@ function App() {
   const [accessToken, setaccessToken] = useState(
     localStorage.getItem('accessToken') || null
   )
-  const [userData, setuserData] = useState(localStorage.getItem('user') || null)
+  const [userData, setuserData] = useState(JSON.parse(localStorage.getItem('user')) || null)
   return (
     <>
       <AuthContext.Provider

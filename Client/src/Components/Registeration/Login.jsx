@@ -50,7 +50,7 @@ function Login() {
     }
 
     setuserData(data?.data?.data)
-    localStorage.setItem('user', data?.data?.data)
+    localStorage.setItem('user', JSON.stringify(data?.data?.data))
   }, [data, setaccessToken, setuserData])
 
   return (
