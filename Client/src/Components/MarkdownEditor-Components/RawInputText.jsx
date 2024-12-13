@@ -3,7 +3,7 @@ import styles from './RawInputText.module.css'
 
 function RawInputText({ rawMarkdownText, setrawMarkdownText }) {
   function handleRawText(e) {
-    const { value } = e.traget
+    const { value } = e.target
     setrawMarkdownText(value)
   }
 

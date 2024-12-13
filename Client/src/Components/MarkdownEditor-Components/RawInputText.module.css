@@ -1,0 +1,22 @@
+#textAreaContainer {
+  border-right: 1px solid var(--gray3);
+  width: 50%;
+  font-family: 'Roboto Mono', serif;
+  letter-spacing: 0.5rem;
+  font-size: x-small;
+}
+
+#header {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  color: var(--gray2);
+}
+
+#textAreaContainer > textarea {
+  height: 85.5vh;
+  width: 100%;
+  font-family: 'Roboto Mono', serif;
+  border: none;
+  padding: 1rem;
+
+}
