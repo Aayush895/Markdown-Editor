@@ -7381,3 +7381,5 @@ info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime"
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"430.702"} {"timestamp":"2024-12-09T15:55:00.746Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"379.744"} {"timestamp":"2024-12-13T16:51:58.377Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"388.166"} {"timestamp":"2024-12-13T16:57:40.731Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"457.977"} {"timestamp":"2024-12-13T19:23:16.163Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"446.519"} {"timestamp":"2024-12-13T19:26:27.097Z"}

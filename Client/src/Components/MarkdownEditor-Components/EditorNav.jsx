@@ -3,8 +3,8 @@ import styles from './EditorNav.module.css'
 import { AuthContext } from '../../AuthContext'
 
 function EditorNav() {
-  const {userData} = useContext(AuthContext)
-
+  let { userData } = useContext(AuthContext)
+  userData = JSON.parse(userData)
   return (
     <nav id={styles.navContainer}>
       <div id={styles.navHeader}>

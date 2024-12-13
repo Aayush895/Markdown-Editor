@@ -49,8 +49,10 @@ function Login() {
       localStorage.setItem('accessToken', data?.data?.accessToken)
     }
 
-    setuserData(data?.data?.data)
-    localStorage.setItem('user', JSON.stringify(data?.data?.data))
+    if (data && data?.data?.data) {
+      setuserData(data?.data?.data)
+      localStorage.setItem('user', JSON.stringify(data?.data?.data))
+    }
   }, [data, setaccessToken, setuserData])
 
   return (
