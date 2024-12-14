@@ -18,5 +18,8 @@
   font-family: 'Roboto Mono', serif;
   border: none;
   padding: 1rem;
+}
 
+#textAreaContainer > textarea:focus {
+  outline: none;
 }

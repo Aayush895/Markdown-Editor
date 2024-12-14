@@ -1,4 +1,4 @@
-import {PropTypes} from "prop-types"
+import { PropTypes } from 'prop-types'
 import styles from './RawInputText.module.css'
 
 function RawInputText({ rawMarkdownText, setrawMarkdownText }) {
@@ -24,6 +24,6 @@ function RawInputText({ rawMarkdownText, setrawMarkdownText }) {
 
 RawInputText.propTypes = {
   rawMarkdownText: PropTypes.string,
-  setrawMarkdownText: PropTypes.func
+  setrawMarkdownText: PropTypes.func,
 }
 export default RawInputText

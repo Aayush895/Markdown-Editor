@@ -1,0 +1,34 @@
+#previewContainer {
+  width: 50%;
+  font-family: 'Roboto Mono', serif;
+  letter-spacing: 0.5rem;
+  font-size: x-small;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0.9rem 0;
+  color: var(--gray2);
+}
+
+#header > img {
+  cursor: pointer;
+  padding: 0.3rem;
+  transition: 0.5s ease-in-out;
+}
+
+#header > img:hover {
+  background-color: var(--gray3);
+}
+
+#preview {
+  height: 85.5vh;
+  background-color: white;
+  font-family: 'Roboto Slab', serif;
+  padding: 1rem;
+  letter-spacing: normal;
+  font-size: medium;
+}
