@@ -13,7 +13,6 @@ test-user
 test@gmail.com
 test123
 
-- Have to style the markdown area properly
 - Have to send the markdown content to the server
 - Have to figure out a way to save these changes
 - Have to delete the markdown file

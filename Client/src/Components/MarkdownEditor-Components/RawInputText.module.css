@@ -18,6 +18,7 @@
   font-family: 'Roboto Mono', serif;
   border: none;
   padding: 1rem;
+  overflow: scroll;
 }
 
 #textAreaContainer > textarea:focus {

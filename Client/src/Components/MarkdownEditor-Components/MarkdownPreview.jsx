@@ -7,7 +7,7 @@ function MarkdownPreview({ rawMarkdownText }) {
   return (
     <div id={styles.previewContainer}>
       <div id={styles.header}>
-        <h1>Preview</h1>
+        <h1>PREVIEW</h1>
         <img src="assets/icon-show-preview.svg" alt="preview" />
       </div>
 
