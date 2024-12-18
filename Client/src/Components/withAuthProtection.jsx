@@ -27,6 +27,12 @@ function withAuthProtection(Component) {
       function initialCheck() {
         // Checking if the access token is generated or not
         if (
+          error?.status == 401 &&
+          error?.response?.data?.message == 'Refresh Token not received'
+        ) {
+          navigate('/login')
+        }
+        if (
           data?.status == 200 &&
           data?.data?.message == 'New token generated'
         ) {
@@ -42,7 +48,7 @@ function withAuthProtection(Component) {
           handleTokenExpiration()
           return
         }
-        
+
         if (
           error?.status == 401 &&
           error?.response?.data?.message == 'Refresh token has expired'

@@ -7383,3 +7383,30 @@ info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime"
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"388.166"} {"timestamp":"2024-12-13T16:57:40.731Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"457.977"} {"timestamp":"2024-12-13T19:23:16.163Z"}
 info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"446.519"} {"timestamp":"2024-12-13T19:26:27.097Z"}
+error: Error: 401 - Refresh Token not received - Error: Refresh Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:126:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-18T15:59:47.169Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"19.271"} {"timestamp":"2024-12-18T15:59:47.186Z"}
+error: Error: 401 - Refresh Token not received - Error: Refresh Token not received
+    at userTokenAuth (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/users.controller.js:126:13)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:47:12) {"timestamp":"2024-12-18T16:08:23.889Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"401","responseTime":"5.537"} {"timestamp":"2024-12-18T16:08:23.892Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"510.044"} {"timestamp":"2024-12-18T16:09:30.195Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"16.678"} {"timestamp":"2024-12-18T16:10:53.381Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"15.494"} {"timestamp":"2024-12-18T16:46:58.004Z"}

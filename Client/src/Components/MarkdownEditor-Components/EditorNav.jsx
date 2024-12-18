@@ -1,14 +1,19 @@
 import { useContext } from 'react'
-import styles from './EditorNav.module.css'
+import {PropTypes} from 'prop-types'
 import { AuthContext } from '../../AuthContext'
+import styles from './EditorNav.module.css'
 
-function EditorNav() {
+function EditorNav({setexpandNav}) {
   let { userData } = useContext(AuthContext)
   userData = JSON.parse(userData)
+
+  function handleExpandableNav() {
+    setexpandNav(true)
+  }
   return (
     <nav id={styles.navContainer}>
       <div id={styles.navHeader}>
-        <div id={styles.expandableNavLogo}>
+        <div id={styles.expandableNavLogo} onClick={handleExpandableNav}>
           <img src="assets/icon-menu.svg" alt="icon-menu" />
         </div>
         <h1>MARKDOWN</h1>
@@ -31,5 +36,9 @@ function EditorNav() {
       </div>
     </nav>
   )
+}
+
+EditorNav.propTypes = {
+  setexpandNav: PropTypes.func
 }
 export default EditorNav

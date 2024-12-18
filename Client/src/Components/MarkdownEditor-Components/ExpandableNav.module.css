@@ -1,0 +1,57 @@
+#expandNavContainer {
+  position: absolute;
+  color: white;
+  border: 1px solid black;
+  height: 100vh;
+  z-index: 999;
+  background-color: var(--black4);
+  backdrop-filter: blur(2px);
+  padding: 1rem 1rem;
+  width: 15%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#header {
+  width: 100%;
+}
+
+#headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#headerContent > h1 {
+  font-size: large;
+  letter-spacing: 0.3rem;
+  color: var(--gray2);
+  text-align: left;
+}
+
+#headerContent > img {
+  width: 10%;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: ease-in 0.2s;
+}
+
+#headerContent > img:hover {
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 8px 0px;
+}
+
+#header > button {
+  color: var(--white);
+  background-color: var(--orange1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#header > button:hover {
+  background-color: var(--orange2);
+}
