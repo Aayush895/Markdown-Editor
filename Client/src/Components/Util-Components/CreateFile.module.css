@@ -1,0 +1,65 @@
+#modalContainer {
+  border: 1px solid;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#modalForm {
+  width: 30%;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: var(--white1);
+  border-radius: 0.5rem;
+}
+
+#modalHeader {
+  margin-bottom: 2rem;
+}
+
+#modalInput {
+  text-align: left;
+}
+
+#modalInput > p {
+  margin-bottom: 1rem;
+}
+
+#modalInput > input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+#buttons {
+  margin: 2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#buttons > button:first-child {
+  color: var(--white1);
+  background-color: var(--orange1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+}
+
+#buttons > button:last-child {
+  color: var(--black3);
+  background-color: var(--gray4);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+}

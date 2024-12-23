@@ -12,9 +12,9 @@ function ExpandableNav({ setexpandNav }) {
       <div id={styles.header}>
         <div id={styles.headerContent}>
           <h1>MY DOCUMENTS</h1>
-          <img src="assets/icon-close.svg" alt="close-btn" />
+          <img src="assets/icon-close.svg" alt="close-btn" onClick={handleExpandNav}/>
         </div>
-        <button onClick={handleExpandNav}>+ New Document</button>
+        <button>+ New Document</button>
       </div>
 
       <div id={styles.filesContainer}>
