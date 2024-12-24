@@ -8,9 +8,16 @@ import styles from './MarkdownEditor.module.css'
 function MarkdownEditor() {
   const [rawMarkdownText, setrawMarkdownText] = useState('')
   const [expandNav, setexpandNav] = useState(false)
+  const [showCreatefile, setshowCreateFile] = useState(false)
   return (
     <div id={styles.container}>
-      {expandNav ? <ExpandableNav setexpandNav={setexpandNav} /> : null}
+      {expandNav ? (
+        <ExpandableNav
+          setexpandNav={setexpandNav}
+          showCreatefile={showCreatefile}
+          setshowCreateFile={setshowCreateFile}
+        />
+      ) : null}
       <EditorNav setexpandNav={setexpandNav} />
       <div id={styles.markDownContainer}>
         <RawInputText
