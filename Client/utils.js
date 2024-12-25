@@ -18,12 +18,10 @@ export const customLoginFetcher = axios.create({
 })
 
 // Custom axios for sending queries/requests to the file routes
-const token = localStorage.getItem('accessToken')
+
 export const customFileFetcher = axios.create({
-  baseURL: 'http://localhost:3002/api/v1',
-  withCredentials: true,
+  baseURL: 'http://localhost:3002/api/v1/documents',
   headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${token}`
+    Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
   },
 })

@@ -1,28 +1,23 @@
 import { useState } from 'react'
 import { PropTypes } from 'prop-types'
-import styles from './CreateFile.module.css'
-import { useCreateFile } from '../../Hooks/customFileHooks'
 import { toast } from 'react-toastify'
-import Loader from './Loader'
+import styles from './CreateFile.module.css'
+import createFileApi from '../../Apis/createFileApi'
 
 function CreateFile({ setshowCreateFile }) {
   const [fileName, setfileName] = useState('')
-  const { createFile, isLoading, responseData } = useCreateFile()
 
-  function handleFileCreation() {
+  async function handleFileCreation() {
     if (!fileName) {
       return toast.error('Please enter the file name that you want to create')
     }
+    const response = await createFileApi(fileName)
 
-    createFile(
-      { name: fileName + '.md' },
-      {
-        onSuccess: () => {
-          setshowCreateFile(false)
-          setfileName('')
-        },
-      }
-    )
+    if (response) {
+      setshowCreateFile(false)
+      setfileName('')
+      return toast.success('File created successfully')
+    }
   }
 
   function handleCancelFileCreation() {
@@ -33,11 +28,6 @@ function CreateFile({ setshowCreateFile }) {
     setfileName(e.target.value)
   }
 
-  if (isLoading) {
-    return <Loader />
-  }
-
-  console.log('RESPONSE DATA: ', responseData)
   return (
     <div id={styles.modalContainer}>
       <div id={styles.modalForm}>
