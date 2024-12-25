@@ -10,7 +10,7 @@ export async function jwtValidation(req, res, next) {
   const token = req.header("Authorization")?.replace("Bearer ", "");
 
   if (!token) {
-    throw new ApiError("Unauthorised access", StatusCodes.UNAUTHORIZED);
+    throw next(new ApiError("Unauthorised access", StatusCodes.UNAUTHORIZED));
   }
 
   try {
