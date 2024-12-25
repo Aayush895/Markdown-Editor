@@ -38,7 +38,7 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
 
 ExpandableNav.propTypes = {
   setexpandNav: PropTypes.func,
-  showCreatefile: PropTypes.boolean,
+  showCreatefile: PropTypes.bool,
   setshowCreateFile: PropTypes.func
 }
 export default ExpandableNav
