@@ -21,6 +21,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [Features to work on](#features-to-work-on)
 - [Steps for protected component in react](#steps-for-protected-component-in-react)
 - [TODO:](#todo)
+- [TODO: Displaying all the fetched docs in the expandable nav and in the previewer](#todo-displaying-all-the-fetched-docs-in-the-expandable-nav-and-in-the-previewer)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -183,5 +184,13 @@ export { healthCheck }
 - Similar steps will be followed for all the other protected components
 
 # TODO:
-- Start the work on the markdown component
+
 - Read about the useEffect cleanup function --> [React useEffect cleanup](https://medium.com/@vishalkalia.er/what-is-the-useeffect-cleanup-function-and-how-it-works-83d8c67a1a10)
+
+# TODO: Displaying all the fetched docs in the expandable nav and in the previewer
+
+- Fetch the created docs
+- Modify the docs by adding another parameter which is going to be `isSelectedFile`
+- Store all these docs in a global storage which will be zustand
+- When clicked on any of the files, make the `isSelectedFile` true and display that file name at the top in a tab format and load all the contents of that file in the input tag and display it in the previewer
+-
