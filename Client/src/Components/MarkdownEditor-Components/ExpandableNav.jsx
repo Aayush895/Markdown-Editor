@@ -1,9 +1,13 @@
+import { useEffect } from 'react'
 import FileComponent from '../Util-Components/FileComponent'
 import CreateFile from '../Util-Components/CreateFile'
+import fileStore from '../../store/FileStore'
 import { PropTypes } from 'prop-types'
+import fetchAllFiles from '../../Apis/fetchFilesApi'
 import styles from './ExpandableNav.module.css'
 
 function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
+  const { fileList, isnewFileCreated, setFileList } = fileStore()
   function handleExpandNav() {
     setexpandNav(false)
   }
@@ -12,9 +16,20 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
     setshowCreateFile(true)
   }
 
+  useEffect(() => {
+    async function getAllFiles() {
+      const files = await fetchAllFiles()
+      setFileList(files)
+    }
+
+    getAllFiles()
+  }, [isnewFileCreated, setFileList])
+
+  console.log('All files: ', fileList)
+
   return (
     <>
-      {showCreatefile && <CreateFile setshowCreateFile={setshowCreateFile}/>}
+      {showCreatefile && <CreateFile setshowCreateFile={setshowCreateFile} />}
       <div id={styles.expandNavContainer}>
         <div id={styles.header}>
           <div id={styles.headerContent}>
@@ -39,6 +54,6 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
 ExpandableNav.propTypes = {
   setexpandNav: PropTypes.func,
   showCreatefile: PropTypes.bool,
-  setshowCreateFile: PropTypes.func
+  setshowCreateFile: PropTypes.func,
 }
 export default ExpandableNav

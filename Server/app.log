@@ -7674,3 +7674,60 @@ info: {"method":"POST","url":"/api/v1/documents/create","status":"201","response
 info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"60.741"} {"timestamp":"2024-12-25T11:23:54.980Z"}
 info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"65.944"} {"timestamp":"2024-12-25T11:24:35.505Z"}
 info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"57.298"} {"timestamp":"2024-12-25T11:25:17.609Z"}
+error: Error: 401 - Access token has expired - Error: Access token has expired
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:26:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-26T12:47:22.070Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"401","responseTime":"13.810"} {"timestamp":"2024-12-26T12:47:22.077Z"}
+error: Error: 401 - Access token has expired - Error: Access token has expired
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:26:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-26T12:47:38.965Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"401","responseTime":"13.122"} {"timestamp":"2024-12-26T12:47:38.969Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"382.473"} {"timestamp":"2024-12-26T12:47:55.662Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"70.982"} {"timestamp":"2024-12-26T12:48:04.269Z"}
+info: {"method":"GET","url":"/api/v1/documents/create","status":"404","responseTime":"6.605"} {"timestamp":"2024-12-26T12:53:31.531Z"}
+info: {"method":"GET","url":"/api/v1/documents/create","status":"404","responseTime":"1.159"} {"timestamp":"2024-12-26T12:53:31.536Z"}
+info: {"method":"GET","url":"/api/v1/documents/fetch","status":"404","responseTime":"4.052"} {"timestamp":"2024-12-26T12:53:59.379Z"}
+info: {"method":"GET","url":"/api/v1/documents/fetch","status":"404","responseTime":"0.933"} {"timestamp":"2024-12-26T12:53:59.383Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"81.666"} {"timestamp":"2024-12-26T12:54:20.829Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"24.935"} {"timestamp":"2024-12-26T12:54:20.856Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"35.198"} {"timestamp":"2024-12-26T12:56:36.938Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"29.038"} {"timestamp":"2024-12-26T12:56:36.971Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"39.671"} {"timestamp":"2024-12-26T12:58:00.909Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"40.264"} {"timestamp":"2024-12-26T12:58:00.952Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"34.846"} {"timestamp":"2024-12-26T12:58:01.084Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"111.177"} {"timestamp":"2024-12-26T12:58:01.198Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"42.044"} {"timestamp":"2024-12-26T13:01:01.788Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"17.981"} {"timestamp":"2024-12-26T13:01:01.807Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"36.585"} {"timestamp":"2024-12-26T13:02:16.639Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"43.033"} {"timestamp":"2024-12-26T13:02:16.684Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"26.653"} {"timestamp":"2024-12-26T13:02:18.994Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"22.792"} {"timestamp":"2024-12-26T13:02:39.960Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"28.702"} {"timestamp":"2024-12-26T13:03:39.744Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"23.821"} {"timestamp":"2024-12-26T13:03:39.770Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"64.703"} {"timestamp":"2024-12-26T13:03:56.609Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"23.208"} {"timestamp":"2024-12-26T13:03:58.178Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"32.814"} {"timestamp":"2024-12-26T13:04:01.828Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"30.191"} {"timestamp":"2024-12-26T13:04:04.613Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"33.959"} {"timestamp":"2024-12-26T13:04:12.640Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"22.326"} {"timestamp":"2024-12-26T13:04:12.666Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"49.166"} {"timestamp":"2024-12-26T13:38:28.260Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"88.164"} {"timestamp":"2024-12-26T13:38:39.265Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"30.232"} {"timestamp":"2024-12-26T13:38:39.297Z"}
+info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"76.228"} {"timestamp":"2024-12-26T13:38:52.610Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"25.255"} {"timestamp":"2024-12-26T13:38:52.647Z"}

@@ -4669,3 +4669,25 @@ error: Error: 401 - Invalid or malformed access token - Error: Invalid or malfor
     at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
     at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
     at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-25T11:01:45.922Z"}
+error: Error: 401 - Access token has expired - Error: Access token has expired
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:26:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-26T12:47:22.070Z"}
+error: Error: 401 - Access token has expired - Error: Access token has expired
+    at jwtValidation (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/jwtValidationMiddleware.js:26:9)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at validationMiddleware (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/middlewares/zodMiddleware.js:9:7)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-26T12:47:38.965Z"}
