@@ -189,8 +189,7 @@ export { healthCheck }
 
 # TODO: Displaying all the fetched docs in the expandable nav and in the previewer
 
-- Fetch the created docs
-- Modify the docs by adding another parameter which is going to be `isSelectedFile`
-- Store all these docs in a global storage which will be zustand
-- When clicked on any of the files, make the `isSelectedFile` true and display that file name at the top in a tab format and load all the contents of that file in the input tag and display it in the previewer
--
+- Fetch the created docs --> Done
+- Store all these docs in a global storage which will be zustand --> Done
+- Modify the docs by adding another parameter which is going to be `isSelectedFile` --> Done
+- When clicked on any of the files, make the `isSelectedFile` true and display that file name at the top in a tab format --> Done

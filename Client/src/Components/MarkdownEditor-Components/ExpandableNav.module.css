@@ -2,7 +2,7 @@
   position: absolute;
   color: white;
   border: 1px solid black;
-  height: 100vh;
+  height: 100.5vh;
   z-index: 999;
   background-color: var(--black4);
   backdrop-filter: blur(2px);
@@ -20,6 +20,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+
 }
 
 #headerContent > h1 {

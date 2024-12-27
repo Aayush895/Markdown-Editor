@@ -1,10 +1,13 @@
 import { useContext } from 'react'
-import {PropTypes} from 'prop-types'
+import { PropTypes } from 'prop-types'
 import { AuthContext } from '../../AuthContext'
 import styles from './EditorNav.module.css'
+import FileTab from '../Util-Components/FileTab'
+import fileStore from '../../store/FileStore'
 
-function EditorNav({setexpandNav}) {
+function EditorNav({ setexpandNav }) {
   let { userData } = useContext(AuthContext)
+  const { isFileTabVisible, selectedFileId } = fileStore()
   userData = JSON.parse(userData)
 
   function handleExpandableNav() {
@@ -17,6 +20,7 @@ function EditorNav({setexpandNav}) {
           <img src="assets/icon-menu.svg" alt="icon-menu" />
         </div>
         <h1>MARKDOWN</h1>
+        {isFileTabVisible ? <FileTab fileName={selectedFileId.name}/> : null}
       </div>
 
       <div id={styles.navItems}>
@@ -39,6 +43,6 @@ function EditorNav({setexpandNav}) {
 }
 
 EditorNav.propTypes = {
-  setexpandNav: PropTypes.func
+  setexpandNav: PropTypes.func,
 }
 export default EditorNav

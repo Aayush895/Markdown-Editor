@@ -7,7 +7,8 @@ import fetchAllFiles from '../../Apis/fetchFilesApi'
 import styles from './ExpandableNav.module.css'
 
 function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
-  const { fileList, isnewFileCreated, setFileList } = fileStore()
+  const { fileList, isnewFileCreated, setFileList, setisNewFileCreated } =
+    fileStore()
   function handleExpandNav() {
     setexpandNav(false)
   }
@@ -20,12 +21,11 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
     async function getAllFiles() {
       const files = await fetchAllFiles()
       setFileList(files)
+      setisNewFileCreated(false)
     }
 
     getAllFiles()
-  }, [isnewFileCreated, setFileList])
-
-  console.log('All files: ', fileList)
+  }, [isnewFileCreated, setFileList, setisNewFileCreated])
 
   return (
     <>
@@ -44,7 +44,15 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
         </div>
 
         <div id={styles.filesContainer}>
-          <FileComponent />
+          {fileList.success &&
+            fileList.data.map((file) => (
+              <FileComponent
+                key={file._id}
+                name={file.name}
+                date={file.createdAt}
+                fileId={file._id}
+              />
+            ))}
         </div>
       </div>
     </>

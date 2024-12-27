@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   font-family: 'Roboto Mono', monospace;
-  padding: 1.5rem 1rem;
+  padding: 0rem 1rem;
 }
 
 #navHeader {
@@ -17,6 +17,7 @@
 
 #navHeader > h1 {
   letter-spacing: 0.5rem;
+  margin-right: 3rem;
 }
 
 #expandableNavLogo {
