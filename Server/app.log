@@ -7829,3 +7829,32 @@ info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","respons
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"30.766"} {"timestamp":"2024-12-28T10:45:51.689Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"84.605"} {"timestamp":"2024-12-28T10:58:24.907Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"31.234"} {"timestamp":"2024-12-28T10:58:24.942Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.759"} {"timestamp":"2024-12-28T11:15:18.868Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"287.513"} {"timestamp":"2024-12-28T11:29:41.505Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"36.238"} {"timestamp":"2024-12-28T11:29:41.557Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:85:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:30:52.263Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/[object%20Object]","status":"500","responseTime":"83.725"} {"timestamp":"2024-12-28T11:30:52.270Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:85:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:32:36.182Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/[object%20Object]","status":"500","responseTime":"40.060"} {"timestamp":"2024-12-28T11:32:36.187Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:88:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:33:12.410Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/[object%20Object]","status":"500","responseTime":"50.382"} {"timestamp":"2024-12-28T11:33:12.416Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:88:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:34:38.536Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/undefined","status":"500","responseTime":"33.398"} {"timestamp":"2024-12-28T11:34:38.539Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"109.799"} {"timestamp":"2024-12-28T11:36:05.662Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"28.444"} {"timestamp":"2024-12-28T11:36:05.698Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/676ea76aa04568fba3ee57a5","status":"200","responseTime":"165.466"} {"timestamp":"2024-12-28T11:36:47.172Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"45.147"} {"timestamp":"2024-12-28T11:42:23.053Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"125.349"} {"timestamp":"2024-12-28T11:42:23.184Z"}
+info: {"method":"PATCH","url":"/api/v1/documents/edit/676ea775a04568fba3ee57ad","status":"200","responseTime":"47.601"} {"timestamp":"2024-12-28T11:42:42.246Z"}

@@ -4691,3 +4691,19 @@ error: Error: 401 - Access token has expired - Error: Access token has expired
     at Layer.handle [as handle_request] (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/layer.js:95:5)
     at /Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:284:15
     at Function.process_params (/Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/node_modules/express/lib/router/index.js:346:12) {"timestamp":"2024-12-26T12:47:38.965Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:85:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:30:52.263Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:85:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:32:36.182Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:88:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:33:12.410Z"}
+error: Error: 500 - Internal Server Error - Error: Internal Server Error
+    at editDocsService (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/services/documentService.js:88:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async editDocs (file:///Users/aayushkumarjha/Desktop/MERN/in-browser-markdown-editor/Server/src/controllers/documents.controller.js:76:5) {"timestamp":"2024-12-28T11:34:38.536Z"}

@@ -10,7 +10,7 @@ function FileComponent({
 }) {
   const { setSelectedFileId, setIsFileTabVisible } = fileStore()
   function handleFileSelection() {
-    setSelectedFileId({ name, fileId })
+    setSelectedFileId({ name, id: fileId })
     setIsFileTabVisible(true)
     setexpandNav(false)
   }

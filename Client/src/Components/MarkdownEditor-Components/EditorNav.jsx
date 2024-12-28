@@ -4,14 +4,20 @@ import { AuthContext } from '../../AuthContext'
 import styles from './EditorNav.module.css'
 import FileTab from '../Util-Components/FileTab'
 import fileStore from '../../store/FileStore'
+import editFileApi from '../../Apis/editFileContentApi'
 
-function EditorNav({ setexpandNav }) {
+function EditorNav({ setexpandNav, rawMarkdownText }) {
   let { userData } = useContext(AuthContext)
   const { isFileTabVisible, selectedFileId } = fileStore()
   userData = JSON.parse(userData)
 
   function handleExpandableNav() {
     setexpandNav(true)
+  }
+
+  async function handleSaveChanges() {
+    const editContent = await editFileApi(selectedFileId.id, rawMarkdownText)
+    console.log(editContent);
   }
   return (
     <nav id={styles.navContainer}>
@@ -20,7 +26,7 @@ function EditorNav({ setexpandNav }) {
           <img src="assets/icon-menu.svg" alt="icon-menu" />
         </div>
         <h1>MARKDOWN</h1>
-        {isFileTabVisible ? <FileTab fileName={selectedFileId.name}/> : null}
+        {isFileTabVisible ? <FileTab fileName={selectedFileId.name} /> : null}
       </div>
 
       <div id={styles.navItems}>
@@ -31,7 +37,7 @@ function EditorNav({ setexpandNav }) {
           </div>
         </div>
         <img src="assets/icon-delete.svg" alt="delete" />
-        <button>
+        <button onClick={handleSaveChanges}>
           <span>
             <img src="assets/icon-save.svg" alt="save" />
           </span>
@@ -44,5 +50,6 @@ function EditorNav({ setexpandNav }) {
 
 EditorNav.propTypes = {
   setexpandNav: PropTypes.func,
+  rawMarkdownText: PropTypes.string,
 }
 export default EditorNav

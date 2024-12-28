@@ -18,7 +18,7 @@ function MarkdownEditor() {
           setshowCreateFile={setshowCreateFile}
         />
       ) : null}
-      <EditorNav setexpandNav={setexpandNav} />
+      <EditorNav setexpandNav={setexpandNav} rawMarkdownText={rawMarkdownText}/>
       <div id={styles.markDownContainer}>
         <RawInputText
           rawMarkdownText={rawMarkdownText}
