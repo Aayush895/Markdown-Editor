@@ -7819,3 +7819,13 @@ info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","respons
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"118.614"} {"timestamp":"2024-12-27T13:57:12.438Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"32.609"} {"timestamp":"2024-12-27T13:58:15.675Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"44.042"} {"timestamp":"2024-12-27T13:58:15.721Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"394.619"} {"timestamp":"2024-12-28T08:12:32.752Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"130.129"} {"timestamp":"2024-12-28T08:13:23.698Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"37.283"} {"timestamp":"2024-12-28T08:13:23.740Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"4.484"} {"timestamp":"2024-12-28T08:42:35.688Z"}
+info: {"method":"POST","url":"/api/v1/users/check","status":"200","responseTime":"7.253"} {"timestamp":"2024-12-28T09:12:36.221Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"444.671"} {"timestamp":"2024-12-28T10:45:16.462Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"34.138"} {"timestamp":"2024-12-28T10:45:51.655Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"30.766"} {"timestamp":"2024-12-28T10:45:51.689Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"84.605"} {"timestamp":"2024-12-28T10:58:24.907Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"31.234"} {"timestamp":"2024-12-28T10:58:24.942Z"}

@@ -51,6 +51,7 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
                 name={file.name}
                 date={file.createdAt}
                 fileId={file._id}
+                setexpandNav={setexpandNav}
               />
             ))}
         </div>

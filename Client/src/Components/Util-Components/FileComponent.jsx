@@ -2,11 +2,17 @@ import fileStore from '../../store/FileStore'
 import { PropTypes } from 'prop-types'
 import styles from './FileComponent.module.css'
 
-function FileComponent({ name = 'untitled-document.md', date, fileId }) {
+function FileComponent({
+  name = 'untitled-document.md',
+  date,
+  fileId,
+  setexpandNav,
+}) {
   const { setSelectedFileId, setIsFileTabVisible } = fileStore()
   function handleFileSelection() {
-    setSelectedFileId({name, fileId})
+    setSelectedFileId({ name, fileId })
     setIsFileTabVisible(true)
+    setexpandNav(false)
   }
   return (
     <div id={styles.fileContainer} onClick={handleFileSelection}>
@@ -23,6 +29,7 @@ FileComponent.propTypes = {
   name: PropTypes.string,
   date: PropTypes.string,
   fileId: PropTypes.string,
+  setexpandNav: PropTypes.func,
 }
 
 export default FileComponent

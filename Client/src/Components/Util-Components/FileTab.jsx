@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types'
 import styles from './FileTab.module.css'
 
-function FileTab({ fileName='untitled-document.md' }) {
+function FileTab({ fileName = 'untitled-document.md' }) {
   return (
     <div id={styles.fileTabContainer}>
       <div id={styles.docImage}>
