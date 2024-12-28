@@ -6,7 +6,12 @@ import { PropTypes } from 'prop-types'
 import fetchAllFiles from '../../Apis/fetchFilesApi'
 import styles from './ExpandableNav.module.css'
 
-function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
+function ExpandableNav({
+  setexpandNav,
+  showCreatefile,
+  setshowCreateFile,
+  setrawMarkdownText,
+}) {
   const { fileList, isnewFileCreated, setFileList, setisNewFileCreated } =
     fileStore()
   function handleExpandNav() {
@@ -49,9 +54,11 @@ function ExpandableNav({ setexpandNav, showCreatefile, setshowCreateFile }) {
               <FileComponent
                 key={file._id}
                 name={file.name}
+                content={file.content}
                 date={file.createdAt}
                 fileId={file._id}
                 setexpandNav={setexpandNav}
+                setrawMarkdownText={setrawMarkdownText}
               />
             ))}
         </div>
@@ -64,5 +71,6 @@ ExpandableNav.propTypes = {
   setexpandNav: PropTypes.func,
   showCreatefile: PropTypes.bool,
   setshowCreateFile: PropTypes.func,
+  setrawMarkdownText: PropTypes.func,
 }
 export default ExpandableNav

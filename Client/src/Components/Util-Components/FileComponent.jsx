@@ -4,15 +4,18 @@ import styles from './FileComponent.module.css'
 
 function FileComponent({
   name = 'untitled-document.md',
+  content,
   date,
   fileId,
   setexpandNav,
+  setrawMarkdownText,
 }) {
   const { setSelectedFileId, setIsFileTabVisible } = fileStore()
   function handleFileSelection() {
     setSelectedFileId({ name, id: fileId })
     setIsFileTabVisible(true)
     setexpandNav(false)
+    setrawMarkdownText(content)
   }
   return (
     <div id={styles.fileContainer} onClick={handleFileSelection}>
@@ -27,9 +30,11 @@ function FileComponent({
 
 FileComponent.propTypes = {
   name: PropTypes.string,
+  content: PropTypes.string,
   date: PropTypes.string,
   fileId: PropTypes.string,
   setexpandNav: PropTypes.func,
+  setrawMarkdownText: PropTypes.func
 }
 
 export default FileComponent

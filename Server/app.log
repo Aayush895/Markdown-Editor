@@ -7858,3 +7858,8 @@ info: {"method":"PATCH","url":"/api/v1/documents/edit/676ea76aa04568fba3ee57a5",
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"45.147"} {"timestamp":"2024-12-28T11:42:23.053Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"125.349"} {"timestamp":"2024-12-28T11:42:23.184Z"}
 info: {"method":"PATCH","url":"/api/v1/documents/edit/676ea775a04568fba3ee57ad","status":"200","responseTime":"47.601"} {"timestamp":"2024-12-28T11:42:42.246Z"}
+info: {"method":"POST","url":"/api/v1/users/login","status":"200","responseTime":"416.132"} {"timestamp":"2024-12-28T12:07:59.154Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"45.535"} {"timestamp":"2024-12-28T12:08:03.937Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"35.061"} {"timestamp":"2024-12-28T12:08:03.975Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"42.395"} {"timestamp":"2024-12-28T12:08:07.537Z"}
+info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"29.277"} {"timestamp":"2024-12-28T12:08:07.569Z"}
