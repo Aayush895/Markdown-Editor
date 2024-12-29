@@ -22,6 +22,7 @@ function MarkdownEditor() {
       <EditorNav
         setexpandNav={setexpandNav}
         rawMarkdownText={rawMarkdownText}
+        setrawMarkdownText={setrawMarkdownText}
       />
       <div id={styles.markDownContainer}>
         <RawInputText
