@@ -9,6 +9,7 @@ function FileComponent({
   fileId,
   setexpandNav,
   setrawMarkdownText,
+  setshowPreview,
 }) {
   const { setSelectedFileId, setIsFileTabVisible } = fileStore()
   function handleFileSelection() {
@@ -16,6 +17,7 @@ function FileComponent({
     setIsFileTabVisible(true)
     setexpandNav(false)
     setrawMarkdownText(content)
+    setshowPreview(true)
   }
   return (
     <div id={styles.fileContainer} onClick={handleFileSelection}>
@@ -34,7 +36,8 @@ FileComponent.propTypes = {
   date: PropTypes.string,
   fileId: PropTypes.string,
   setexpandNav: PropTypes.func,
-  setrawMarkdownText: PropTypes.func
+  setrawMarkdownText: PropTypes.func,
+  setshowPreview: PropTypes.func,
 }
 
 export default FileComponent

@@ -9,6 +9,7 @@ function MarkdownEditor() {
   const [rawMarkdownText, setrawMarkdownText] = useState('')
   const [expandNav, setexpandNav] = useState(false)
   const [showCreatefile, setshowCreateFile] = useState(false)
+  const [showPreview, setshowPreview] = useState(false)
   return (
     <div id={styles.container}>
       {expandNav ? (
@@ -17,19 +18,29 @@ function MarkdownEditor() {
           showCreatefile={showCreatefile}
           setshowCreateFile={setshowCreateFile}
           setrawMarkdownText={setrawMarkdownText}
+          setshowPreview={setshowPreview}
         />
       ) : null}
       <EditorNav
         setexpandNav={setexpandNav}
         rawMarkdownText={rawMarkdownText}
         setrawMarkdownText={setrawMarkdownText}
+        setshowPreview={setshowPreview}
       />
       <div id={styles.markDownContainer}>
-        <RawInputText
-          rawMarkdownText={rawMarkdownText}
-          setrawMarkdownText={setrawMarkdownText}
-        />
-        <MarkdownPreview rawMarkdownText={rawMarkdownText} />
+        {showPreview ? (
+          <>
+            <RawInputText
+              rawMarkdownText={rawMarkdownText}
+              setrawMarkdownText={setrawMarkdownText}
+            />
+            <MarkdownPreview rawMarkdownText={rawMarkdownText} />
+          </>
+        ) : (
+          <div id={styles.noContentPreview}>
+            <h1>Select a file to view the preview</h1>
+          </div>
+        )}
       </div>
     </div>
   )

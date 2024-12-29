@@ -8,7 +8,12 @@ import editFileApi from '../../Apis/editFileContentApi'
 import deleteFileApi from '../../Apis/deleteFilesApi'
 import { toast } from 'react-toastify'
 
-function EditorNav({ setexpandNav, rawMarkdownText, setrawMarkdownText }) {
+function EditorNav({
+  setexpandNav,
+  rawMarkdownText,
+  setrawMarkdownText,
+  setshowPreview,
+}) {
   let { userData } = useContext(AuthContext)
   const { isFileTabVisible, selectedFileId, setIsFileTabVisible } = fileStore()
   userData = JSON.parse(userData)
@@ -29,6 +34,7 @@ function EditorNav({ setexpandNav, rawMarkdownText, setrawMarkdownText }) {
     const deleteFile = await deleteFileApi(selectedFileId.id)
     setrawMarkdownText('')
     setIsFileTabVisible(false)
+    setshowPreview(false)
     return toast.success(deleteFile.message, {
       autoClose: 500,
       pauseOnHover: false,
@@ -72,5 +78,6 @@ EditorNav.propTypes = {
   setexpandNav: PropTypes.func,
   rawMarkdownText: PropTypes.string,
   setrawMarkdownText: PropTypes.func,
+  setshowPreview: PropTypes.func
 }
 export default EditorNav

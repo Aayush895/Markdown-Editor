@@ -11,6 +11,7 @@ function ExpandableNav({
   showCreatefile,
   setshowCreateFile,
   setrawMarkdownText,
+  setshowPreview,
 }) {
   const { fileList, isnewFileCreated, setFileList, setisNewFileCreated } =
     fileStore()
@@ -59,6 +60,7 @@ function ExpandableNav({
                 fileId={file._id}
                 setexpandNav={setexpandNav}
                 setrawMarkdownText={setrawMarkdownText}
+                setshowPreview={setshowPreview}
               />
             ))}
         </div>
@@ -72,5 +74,6 @@ ExpandableNav.propTypes = {
   showCreatefile: PropTypes.bool,
   setshowCreateFile: PropTypes.func,
   setrawMarkdownText: PropTypes.func,
+  setshowPreview: PropTypes.func
 }
 export default ExpandableNav
