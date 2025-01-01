@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Util-Components/Loader'
 import style from './Login.module.css'
@@ -38,22 +38,20 @@ function Login() {
           password: '',
         })
 
+        if (data && data?.data?.accessToken) {
+          setaccessToken(data?.data?.accessToken)
+          localStorage.setItem('accessToken', data?.data?.accessToken)
+        }
+
+        if (data && data?.data?.data) {
+          setuserData(data?.data?.data)
+          localStorage.setItem('user', JSON.stringify(data?.data?.data))
+        }
+
         navigate('/markdown')
       },
     })
   }
-
-  useEffect(() => {
-    if (data && data?.data?.accessToken) {
-      setaccessToken(data?.data?.accessToken)
-      localStorage.setItem('accessToken', data?.data?.accessToken)
-    }
-
-    if (data && data?.data?.data) {
-      setuserData(data?.data?.data)
-      localStorage.setItem('user', JSON.stringify(data?.data?.data))
-    }
-  }, [data, setaccessToken, setuserData])
 
   return (
     <div id={style.loginContainer}>

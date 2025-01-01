@@ -33,7 +33,7 @@
   letter-spacing: normal;
   font-size: medium;
   color: var(--gray1);
-  overflow: scroll;
+  overflow: auto;
 }
 
 #preview h1 {
@@ -51,7 +51,10 @@
   margin-bottom: 1rem;
 }
 
-#preview h3, #preview h4, #preview h5, #preview h6 {
+#preview h3,
+#preview h4,
+#preview h5,
+#preview h6 {
   color: var(--black4);
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -123,7 +126,7 @@
   color: var(--orange1);
   font-size: 1.5em;
   line-height: 1;
-  top: -2px; 
+  top: -2px;
 }
 
 /* Nested list styling */

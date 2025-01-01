@@ -9,6 +9,7 @@
   padding: 1rem 1rem;
   width: 15%;
   font-family: 'Roboto Mono', monospace;
+  overflow-y: auto;
 }
 
 #header {
