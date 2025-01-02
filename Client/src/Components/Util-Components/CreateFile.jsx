@@ -19,7 +19,10 @@ function CreateFile({ setshowCreateFile }) {
       setshowCreateFile(false)
       setfileName('')
       setisNewFileCreated(true)
-      return toast.success('File created successfully')
+      return toast.success('File created successfully', {
+        autoClose: 1500,
+        pauseOnHover: false,
+      })
     }
   }
 

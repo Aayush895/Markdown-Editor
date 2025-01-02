@@ -52,7 +52,10 @@ function Signup() {
           profilePic: '',
         })
         fileInputRef.current.value = ''
-        return toast.success('User registered!')
+        return toast.success('User registered!', {
+          autoClose: 1500,
+          pauseOnHover: false,
+        })
       },
     })
   }
