@@ -20371,3 +20371,5 @@ info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","respons
 info: {"method":"POST","url":"/api/v1/documents/create","status":"201","responseTime":"93.892"} {"timestamp":"2025-01-02T06:50:36.656Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"200","responseTime":"71.690"} {"timestamp":"2025-01-02T06:50:36.740Z"}
 info: {"method":"GET","url":"/api/v1/documents/get-docs","status":"304","responseTime":"28.252"} {"timestamp":"2025-01-02T06:50:36.774Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2442.104"} {"timestamp":"2025-01-12T06:29:04.182Z"}
+info: {"method":"POST","url":"/api/v1/users/register","status":"201","responseTime":"2440.615"} {"timestamp":"2025-01-12T06:37:29.074Z"}

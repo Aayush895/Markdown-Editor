@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Util-Components/Loader'
-import style from './Login.module.css'
 import { useLogin } from '../../Hooks/customFetchHooks'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../AuthContext'
+import style from './Login.module.css'
 
 function Login() {
   const navigate = useNavigate()
