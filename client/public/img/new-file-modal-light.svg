@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Modal Background -->
+  <rect x="0" y="0" width="800" height="500" fill="rgba(0, 0, 0, 0.5)" />
+
+  <!-- Modal Container -->
+  <rect x="200" y="100" width="400" height="300" rx="8" fill="#FFFFFF" stroke="#E0E0E0" />
+
+  <!-- Modal Header -->
+  <text x="400" y="140" font-family="Arial" font-size="20" fill="#333333" text-anchor="middle">Create New File</text>
+
+  <!-- File Name Input -->
+  <text x="250" y="190" font-family="Arial" font-size="14" fill="#666666">File Name</text>
+  <rect x="250" y="200" width="300" height="40" rx="4" fill="#FFFFFF" stroke="#E0E0E0" />
+
+  <!-- File Extension -->
+  <text x="250" y="250" font-family="Arial" font-size="14" fill="#666666">.md</text>
+
+  <!-- Buttons -->
+  <rect x="250" y="310" width="130" height="40" rx="4" fill="#E86C52" />
+  <text x="315" y="335" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">Create</text>
+
+  <rect x="390" y="310" width="130" height="40" rx="4" fill="#F5F5F5" stroke="#E0E0E0" />
+  <text x="455" y="335" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">Cancel</text>
+</svg>

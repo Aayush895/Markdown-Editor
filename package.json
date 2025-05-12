@@ -1,0 +1,18 @@
+{
+  "name": "in-browser-markdown-editor",
+  "version": "1.0.0",
+  "description": "This is a solution to the [In-browser markdown editor challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/inbrowser-markdown-editor-r16TrrQX9). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix nasa-front-end",
+    "install": "npm install server && npm install nasa-front-end",
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix nasa-front-end",
+    "watch": "npm run server & npm run client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
