@@ -2,9 +2,33 @@
 
 This is a solution to the [In-browser markdown editor challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/inbrowser-markdown-editor-r16TrrQX9). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+# TODOS for UI side:
+
+- [x] Build Navbar
+- [] Build expandable Nav to view all the files
+- [] Build the Markdown Editor
+- [] Build the Markdown Preview section
+- [] Provide all the functionalites to the button
+- [] Integrate the backend APIs so that user can perform CRUD operations on the client side
+- [] Make the UI responsive
+- [] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference
+- [] Deploy the app
+
+# TODOS for Server side:
+
+- [x] Perform server setup
+- [x] Create the API for fetching all documents
+- [x] Create the API for creating a document
+- [] Create the API for editing a document
+- [] Create the API for deleting a document
+- [] Deploy the server on a hosting platform
+- [] Integrate the APIs to the client side
+
 ## Table of contents
 
 - [Frontend Mentor - In-browser markdown editor solution](#frontend-mentor---in-browser-markdown-editor-solution)
+- [TODOS for UI side:](#todos-for-ui-side)
+- [TODOS for Server side:](#todos-for-server-side)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -17,8 +41,6 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
     - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
-- [Features built so far](#features-built-so-far)
-- [Features to work on](#features-to-work-on)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -122,53 +144,6 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
 
-Async handler code:
-
-```js
-const asyncHandler = (requestHandler) => {
-  return (req, res, next) => {
-    Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
-  }
-}
-
-export { asyncHandler }
-```
-
-Health-check route:
-
-```js
-import { ApiResponse } from '../utils/ApiResponse.js'
-import { asyncHandler } from '../utils/asyncHandler.js'
-
-const healthCheck = asyncHandler(async function health(req, res) {
-  return res.status(200).json(new ApiResponse(200, 'OK', 'Health check passed'))
-})
-export { healthCheck }
-```
-
-# Features built so far
-
-- Done with the server. The server has following features:
-  - The user can register themselves from the application
-  - The user can login themselves from the application
-  - The user can logout themselves from the application
-  - The user can perfrom CRUD operations on the documents
-
-# Features to work on
-
-- Create a UI for the client.
-- The UI should be responsvie.
-- The user should be able to perform all the server functions from the UI.
-- Proper error handling should also be done on the UI side.
-- The user should also be to share the live link of this doc with others.
-- User should also be able to download the doc by converting the doc from .md to .pdf file. (The conversion part is optional).
-- The user should only be able to read the doc.
-
 **Optional Features to work on in the feature to enhance knowledge**
 
 - Different users should be able to collaborate on the docs when given permission.(Kind of like google docs. If one person makes changes in the docs from their side then the other user should be able to view those changes in the docs as well live)
-
-- Test user
-  test-user
-  test@gmail.com
-  test123

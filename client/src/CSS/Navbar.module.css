@@ -1,0 +1,59 @@
+#navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--black-3);
+  color: var(--white);
+}
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 100;
+  width: 35%;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+}
+
+.navLogo > p {
+  font-size: x-large;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.5rem;
+  border-right: 1px solid;
+  padding: 0.5rem 1.5rem 0 0;
+}
+
+.docHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.docName > p {
+  margin-bottom: 0.4rem;
+}
+
+.docName > p:first-child {
+  color: var(--dark-white);
+}
+
+.docName > p:last-child {
+  font-weight: 400;
+}
+
+.navEditBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 17%;
+}
