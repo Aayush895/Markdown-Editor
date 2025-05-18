@@ -5,24 +5,24 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 # TODOS for UI side:
 
 - [x] Build Navbar
-- [] Build expandable Nav to view all the files
-- [] Build the Markdown Editor
-- [] Build the Markdown Preview section
-- [] Provide all the functionalites to the button
-- [] Integrate the backend APIs so that user can perform CRUD operations on the client side
-- [] Make the UI responsive
-- [] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference
-- [] Deploy the app
+- [ ] Build expandable Nav to view all the files
+- [x] Build the Markdown Editor
+- [x] Build the Markdown Preview section
+- [ ] Provide all the functionalites to the button
+- [ ] Integrate the backend APIs so that user can perform CRUD operations on the client side
+- [ ] Make the UI responsive
+- [ ] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference
+- [ ] Deploy the app
 
 # TODOS for Server side:
 
 - [x] Perform server setup
 - [x] Create the API for fetching all documents
 - [x] Create the API for creating a document
-- [] Create the API for editing a document
-- [] Create the API for deleting a document
-- [] Deploy the server on a hosting platform
-- [] Integrate the APIs to the client side
+- [ ] Create the API for editing a document
+- [ ] Create the API for deleting a document
+- [ ] Deploy the server on a hosting platform
+- [ ] Integrate the APIs to the client side
 
 ## Table of contents
 
