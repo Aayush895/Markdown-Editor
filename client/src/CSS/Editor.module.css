@@ -1,0 +1,25 @@
+#editorContainer {
+  border-right: 1px solid var(--dark-white);
+  width: 50%;
+  height: 91.5vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#header {
+  padding: 1rem 1rem;
+  color: var(--gray-1);
+  background-color: var(--dark-white);
+  letter-spacing: 0.15rem;
+  font-weight: 450;
+}
+
+#editor {
+  margin: 0;
+}
+
+#editor > textarea {
+  width: 100%;
+  border: none;
+  height: 86.55vh;
+  padding: 1rem 1rem;
+}

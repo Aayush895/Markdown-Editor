@@ -1,0 +1,38 @@
+/* markdown-styles.css */
+#previewContainer {
+  width: 50%;
+  height: 91.5vh;
+  border-left: 1px solid var(--dark-white);
+  font-family: 'Roboto', sans-serif;
+}
+
+#header {
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+  color: var(--gray-1);
+  background-color: var(--dark-white);
+  letter-spacing: 0.15rem;
+  font-weight: 450;
+}
+
+#preview {
+  padding: 0 1rem;
+}
+
+#preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: blue;
+}
+
+#preview code {
+  background-color: #f7fafc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+#preview blockquote {
+  border-left: 4px solid #e2e8f0;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}

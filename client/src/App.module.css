@@ -1,0 +1,7 @@
+#editorPreviewContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 91.7vh;
+  overflow-y: hidden;
+}
