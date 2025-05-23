@@ -1,0 +1,30 @@
+#sideBarContainer {
+  height: 91.65vh;
+  background-color: var(--black-2);
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  color: var(--gray-2);
+  letter-spacing: 0.3rem;
+}
+
+.addDocument {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.document {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.docHeader > p:first-child {
+  color: var(--gray-2);
+  margin-bottom: 0.3rem;
+}

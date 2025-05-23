@@ -1,19 +1,38 @@
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { CiFileOn } from 'react-icons/ci'
 import { IoIosSave } from 'react-icons/io'
+import { AiOutlineClose } from 'react-icons/ai'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import Button from '../Button/Button'
 import styles from '../../CSS/Navbar.module.css'
 
-function Navbar() {
+function Navbar({ expand, handleSideBar }) {
   return (
     <div id={styles.navContainer}>
       <div className={styles.navHeader}>
         <div className={styles.navLogo}>
-          <RxHamburgerMenu
-            size={90}
-            style={{ backgroundColor: '#35393F', padding: '1rem 0.5rem' }}
-          />
+          {expand ? (
+            <AiOutlineClose
+              size={90}
+              style={{
+                backgroundColor: '#35393F',
+                padding: '1rem 0.5rem',
+                cursor: 'pointer',
+              }}
+              onClick={handleSideBar}
+            />
+          ) : (
+            <RxHamburgerMenu
+              size={90}
+              style={{
+                backgroundColor: '#35393F',
+                padding: '1rem 0.5rem',
+                cursor: 'pointer',
+              }}
+              onClick={handleSideBar}
+            />
+          )}
+
           <p>MARKDOWN</p>
         </div>
         <div className={styles.docHeader}>
@@ -25,7 +44,10 @@ function Navbar() {
         </div>
       </div>
       <div className={styles.navEditBtns}>
-        <RiDeleteBin6Line size={40} style={{ color: '#5A6069', cursor: 'pointer' }} />
+        <RiDeleteBin6Line
+          size={40}
+          style={{ color: '#5A6069', cursor: 'pointer' }}
+        />
         <Button btnIcon={<IoIosSave size={25} />} btnName="Save Changes" />
       </div>
     </div>

@@ -1,7 +1,7 @@
 #editorContainer {
   border-right: 1px solid var(--dark-white);
   width: 50%;
-  height: 91.5vh;
+  height: 91.65vh;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -22,4 +22,5 @@
   border: none;
   height: 86.55vh;
   padding: 1rem 1rem;
+  outline: none;
 }
