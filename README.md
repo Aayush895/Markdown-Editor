@@ -8,7 +8,6 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Build sidebar to view all the files
 - [x] Build the Markdown Editor
 - [x] Build the Markdown Preview section
-- [ ] Provide all the functionalites to the button
 - [ ] Integrate the backend APIs so that user can perform CRUD operations on the client side
 - [ ] Make the UI responsive
 - [ ] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference

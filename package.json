@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-server": "npm install --prefix server",
-    "install-client": "npm install --prefix nasa-front-end",
-    "install": "npm install server && npm install nasa-front-end",
+    "install-client": "npm install --prefix client",
+    "install": "npm install server && npm install client",
     "server": "npm start --prefix server",
-    "client": "npm start --prefix nasa-front-end",
+    "client": "npm start --prefix client",
     "watch": "npm run server & npm run client"
   },
   "keywords": [],

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { CiFileOn } from 'react-icons/ci'
 import { IoIosSave } from 'react-icons/io'
@@ -7,6 +8,13 @@ import Button from '../Button/Button'
 import styles from '../../CSS/Navbar.module.css'
 
 function Navbar({ expand, handleSideBar }) {
+  const [isEditActive, setisEditActive] = useState(false)
+  const [fileName, setFileName] = useState('untitled-document')
+
+  function handleFileName(e) {
+    setFileName(e.target.value)
+  }
+
   return (
     <div id={styles.navContainer}>
       <div className={styles.navHeader}>
@@ -39,7 +47,16 @@ function Navbar({ expand, handleSideBar }) {
           <CiFileOn size={30} />
           <div className={styles.docName}>
             <p>Document Name</p>
-            <p>Sample-File-Name.md</p>
+            {isEditActive ? (
+              <input
+                value={`${fileName}`}
+                onChange={handleFileName}
+                className={styles.editFileName}
+                onBlur={() => setisEditActive(false)}
+              />
+            ) : (
+              <p onClick={() => setisEditActive(true)}>{`${fileName}.md`}</p>
+            )}
           </div>
         </div>
       </div>
@@ -53,4 +70,5 @@ function Navbar({ expand, handleSideBar }) {
     </div>
   )
 }
+
 export default Navbar
