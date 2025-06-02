@@ -11,10 +11,8 @@ export async function getDocumentsRepository() {
 }
 
 export async function createDocumentRepository(documentDetails) {
+  // Doing an eager initlization, where the document is created with default values on the click of a button
   try {
-    // TODO: Check if the document of the same name exist or not
-    // If it does then do not create the document
-    
     const createDocument = await Document.create(documentDetails);
     return createDocument;
   } catch (error) {

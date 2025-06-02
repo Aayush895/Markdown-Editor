@@ -59,6 +59,22 @@
   font-weight: 400;
 }
 
+.editFileName {
+  all: unset;
+  background: none;
+  color: var(--dark-white);
+  padding: 0;
+	border-radius: 0;
+	outline: none;
+  border-bottom: 1px solid var(--white);
+  box-shadow: none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  font-weight: 400;
+  font-size: medium;
+}
+
 .navEditBtns {
   display: flex;
   align-items: center;

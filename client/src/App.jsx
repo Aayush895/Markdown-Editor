@@ -19,7 +19,7 @@ function App() {
       <div id={styles.appContainer}>
         <Navbar expand={expand} handleSideBar={handleSideBar} />
         <div id={styles.editorPreviewContainer}>
-          <Sidebar expand={expand} />
+          <Sidebar expand={expand} markdownContent={markdownContent}/>
           <Editor />
           <Preview />
         </div>
