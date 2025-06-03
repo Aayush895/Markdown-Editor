@@ -7,10 +7,9 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import Button from '../Button/Button'
 import styles from '../../CSS/Navbar.module.css'
 
-function Navbar({ expand, handleSideBar }) {
+function Navbar({ expand, handleSideBar, fileName, setFileName }) {
   const [isEditActive, setisEditActive] = useState(false)
-  const [fileName, setFileName] = useState('untitled-document')
-
+  
   function handleFileName(e) {
     setFileName(e.target.value)
   }

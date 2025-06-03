@@ -7,6 +7,7 @@ import Sidebar from './Components/Sidebar/Sidebar'
 import styles from './App.module.css'
 
 function App() {
+  const [fileName, setFileName] = useState('Untitled-document')
   const [markdownContent, setMarkdownContent] = useState('')
   const [expand, setExpand] = useState(false)
 
@@ -17,9 +18,18 @@ function App() {
   return (
     <MarkdownContext.Provider value={{ markdownContent, setMarkdownContent }}>
       <div id={styles.appContainer}>
-        <Navbar expand={expand} handleSideBar={handleSideBar} />
+        <Navbar
+          expand={expand}
+          handleSideBar={handleSideBar}
+          fileName={fileName}
+          setFileName={setFileName}
+        />
         <div id={styles.editorPreviewContainer}>
-          <Sidebar expand={expand} markdownContent={markdownContent}/>
+          <Sidebar
+            expand={expand}
+            fileName={fileName}
+            markdownContent={markdownContent}
+          />
           <Editor />
           <Preview />
         </div>
