@@ -1,5 +1,6 @@
 const baseURL = 'http://localhost:3000/documents'
 
+// TODO: Error handling for api responses
 export async function createDocument({ docName, docBody }) {
   const response = await fetch(`${baseURL}/`, {
     method: 'POST',
@@ -9,5 +10,10 @@ export async function createDocument({ docName, docBody }) {
     },
   })
 
+  return await response.json()
+}
+
+export async function getDocuments() {
+  const response = await fetch(`${baseURL}/`)
   return await response.json()
 }

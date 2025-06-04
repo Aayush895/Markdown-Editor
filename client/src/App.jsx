@@ -9,6 +9,8 @@ import styles from './App.module.css'
 function App() {
   const [fileName, setFileName] = useState('Untitled-document')
   const [markdownContent, setMarkdownContent] = useState('')
+  const [markdownFiles, setmarkdownFiles] = useState([])
+  const [isNewFileAdded, setisNewFileAdded] = useState(false)
   const [expand, setExpand] = useState(false)
 
   function handleSideBar() {
@@ -16,7 +18,16 @@ function App() {
   }
 
   return (
-    <MarkdownContext.Provider value={{ markdownContent, setMarkdownContent }}>
+    <MarkdownContext.Provider
+      value={{
+        markdownContent,
+        setMarkdownContent,
+        markdownFiles,
+        setmarkdownFiles,
+        isNewFileAdded,
+        setisNewFileAdded,
+      }}
+    >
       <div id={styles.appContainer}>
         <Navbar
           expand={expand}
