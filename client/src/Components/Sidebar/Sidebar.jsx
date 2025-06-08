@@ -1,39 +1,35 @@
-import { useContext, useEffect } from 'react'
-import Button from '../Button/Button'
+import { useContext } from 'react'
+import { useFetchFile } from '../../Hooks/useFetchFile'
+import { toast } from 'react-toastify'
 import { IoIosAdd } from 'react-icons/io'
-import { CiFileOn } from 'react-icons/ci'
-import styles from '../../CSS/Sidebar.module.css'
-import { createDocument, getDocuments } from '../Apis/documentApis'
+import { createDocument } from '../Apis/documentApis'
+import { fetchMarkdownFiles } from '../../Utils/utilFunctions'
 import MarkdownContext from '../Context/MarkdownContext'
+import Button from '../Button/Button'
+import SidebarCards from './SidebarCards'
+import styles from '../../CSS/Sidebar.module.css'
 
-// TODO: Should show a notification when the document is created successfully
-// TODO: Should also update the list of documents in the sidebar when new file is created and also show the contents of the particular file when a file is selected from the sidebar
+// TODO: Should show the contents of the particular file when a file is selected from the sidebar
 
 function Sidebar({ expand, fileName, markdownContent }) {
-  const { markdownFiles, setmarkdownFiles, isNewFileAdded, setisNewFileAdded } =
-    useContext(MarkdownContext)
+  const { markdownFiles, setmarkdownFiles } = useContext(MarkdownContext)
+  const fetchedFiles = useFetchFile(markdownFiles, setmarkdownFiles)
   async function handleCreateDocument() {
     const response = await createDocument({
       docName: fileName,
       docBody: markdownContent,
     })
 
-    setisNewFileAdded(true)
+    toast(response?.message, {
+      autoClose: 1500,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+    })
+
+    await fetchMarkdownFiles(setmarkdownFiles)
     console.log('LOGGING RESPONSE', response)
   }
-
-  async function fetchMarkdownFiles() {
-    if(isNewFileAdded) {
-      const files = await getDocuments()
-      console.log('LOGGING FILeS:', files)
-      setmarkdownFiles([...markdownFiles, files])
-      setisNewFileAdded(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchMarkdownFiles()
-  }, [isNewFileAdded])
 
   return (
     <div
@@ -51,14 +47,13 @@ function Sidebar({ expand, fileName, markdownContent }) {
         />
       </div>
       <div className={styles.sideBarItems}>
-        {/* Below will be the logic to load all the documents */}
-        <div className={styles.document}>
-          <CiFileOn size={30} style={{ marginRight: '0.7rem' }} />
-          <div className={styles.docHeader}>
-            <p>01 April 2025</p>
-            <p>Sample-File-Name.md</p>
-          </div>
-        </div>
+        {fetchedFiles?.documents.map((file) => (
+          <SidebarCards
+            date={file?.createdAt}
+            fileName={file?.name}
+            key={file?._id}
+          />
+        ))}
       </div>
     </div>
   )

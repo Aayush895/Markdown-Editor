@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 import MarkdownContext from './Components/Context/MarkdownContext'
 import Navbar from './Components/Nav/Navbar'
 import Editor from './Components/Editor/Editor'
@@ -9,8 +10,7 @@ import styles from './App.module.css'
 function App() {
   const [fileName, setFileName] = useState('Untitled-document')
   const [markdownContent, setMarkdownContent] = useState('')
-  const [markdownFiles, setmarkdownFiles] = useState([])
-  const [isNewFileAdded, setisNewFileAdded] = useState(false)
+  const [markdownFiles, setmarkdownFiles] = useState(null)
   const [expand, setExpand] = useState(false)
 
   function handleSideBar() {
@@ -24,8 +24,6 @@ function App() {
         setMarkdownContent,
         markdownFiles,
         setmarkdownFiles,
-        isNewFileAdded,
-        setisNewFileAdded,
       }}
     >
       <div id={styles.appContainer}>
@@ -45,6 +43,7 @@ function App() {
           <Preview />
         </div>
       </div>
+      <ToastContainer />
     </MarkdownContext.Provider>
   )
 }
