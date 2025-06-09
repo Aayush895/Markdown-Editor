@@ -9,11 +9,17 @@ import Button from '../Button/Button'
 import SidebarCards from './SidebarCards'
 import styles from '../../CSS/Sidebar.module.css'
 
-// TODO: Should show the contents of the particular file when a file is selected from the sidebar
-
-function Sidebar({ expand, fileName, markdownContent }) {
+function Sidebar({
+  expand,
+  fileName,
+  setFileName,
+  markdownContent,
+  setMarkdownContent,
+}) {
   const { markdownFiles, setmarkdownFiles } = useContext(MarkdownContext)
+
   const fetchedFiles = useFetchFile(markdownFiles, setmarkdownFiles)
+
   async function handleCreateDocument() {
     const response = await createDocument({
       docName: fileName,
@@ -28,7 +34,9 @@ function Sidebar({ expand, fileName, markdownContent }) {
     })
 
     await fetchMarkdownFiles(setmarkdownFiles)
-    console.log('LOGGING RESPONSE', response)
+
+    setFileName('Untitled-document')
+    setMarkdownContent('')
   }
 
   return (
@@ -50,7 +58,10 @@ function Sidebar({ expand, fileName, markdownContent }) {
         {fetchedFiles?.documents.map((file) => (
           <SidebarCards
             date={file?.createdAt}
-            fileName={file?.name}
+            selectedFileName={file?.name}
+            selectedFileContent={file?.content}
+            setFileName={setFileName}
+            setMarkdownContent={setMarkdownContent}
             key={file?._id}
           />
         ))}

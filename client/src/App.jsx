@@ -37,7 +37,9 @@ function App() {
           <Sidebar
             expand={expand}
             fileName={fileName}
+            setFileName={setFileName}
             markdownContent={markdownContent}
+            setMarkdownContent={setMarkdownContent}
           />
           <Editor />
           <Preview />
