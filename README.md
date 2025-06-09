@@ -19,7 +19,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Create the API for fetching all documents
 - [x] Create the API for creating a document
 - [ ] Create the API for editing a document
-- [ ] Create the API for deleting a document
+- [x] Create the API for deleting a document
 - [ ] Deploy the server on a hosting platform
 - [ ] Integrate the APIs to the client side
 

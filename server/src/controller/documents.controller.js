@@ -1,6 +1,7 @@
 import {
   getDocumentsRepository,
   createDocumentRepository,
+  deleteFileRepository,
 } from '../repositories/documentRepo/documentRepository.js';
 
 export async function getDocuments(req, res) {
@@ -39,5 +40,25 @@ export async function createDocument(req, res) {
   } catch (error) {
     console.log('Something went wrong when creating the document: ', error);
     res.status(500).send('Error creating the document');
+  }
+}
+
+export async function deleteFile(req, res) {
+  try {
+    const { id } = req.params;
+    if (!id) {
+      throw new Error('Please provide file id');
+    }
+
+    const deletedFile = await deleteFileRepository(id);
+
+    return res.status(200).send({
+      fileName: deletedFile?.name,
+      message: `${deletedFile?.name}.md File was deleted successfully`,
+      success: true,
+    });
+  } catch (error) {
+    console.log('Something went wrong when deleting the document: ', error);
+    res.status(500).send('Error deleting  the document');
   }
 }
