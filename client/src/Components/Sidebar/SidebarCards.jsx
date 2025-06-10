@@ -1,5 +1,7 @@
+import { useContext } from 'react'
 import { CiFileOn } from 'react-icons/ci'
 import styles from '../../CSS/SidebarCards.module.css'
+import MarkdownContext from '../Context/MarkdownContext'
 
 function SidebarCards({
   date,
@@ -7,8 +9,11 @@ function SidebarCards({
   selectedFileContent,
   setFileName,
   setMarkdownContent,
+  fileId,
 }) {
+  const { setselectedFileId } = useContext(MarkdownContext)
   function handleFileSelection() {
+    setselectedFileId(fileId)
     setFileName(selectedFileName)
     setMarkdownContent(selectedFileContent)
   }

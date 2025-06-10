@@ -17,3 +17,13 @@ export async function getDocuments() {
   const response = await fetch(`${baseURL}/`)
   return await response.json()
 }
+
+export async function deleteDocument(id) {
+  const response = await fetch(`${baseURL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  return await response.json()
+}

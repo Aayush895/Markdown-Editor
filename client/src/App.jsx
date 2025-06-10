@@ -12,6 +12,7 @@ function App() {
   const [markdownContent, setMarkdownContent] = useState('')
   const [markdownFiles, setmarkdownFiles] = useState(null)
   const [expand, setExpand] = useState(false)
+  const [selectedFileId, setselectedFileId] = useState(null)
 
   function handleSideBar() {
     setExpand(!expand)
@@ -24,6 +25,8 @@ function App() {
         setMarkdownContent,
         markdownFiles,
         setmarkdownFiles,
+        selectedFileId,
+        setselectedFileId,
       }}
     >
       <div id={styles.appContainer}>
@@ -32,6 +35,7 @@ function App() {
           handleSideBar={handleSideBar}
           fileName={fileName}
           setFileName={setFileName}
+          setMarkdownContent={setMarkdownContent}
         />
         <div id={styles.editorPreviewContainer}>
           <Sidebar

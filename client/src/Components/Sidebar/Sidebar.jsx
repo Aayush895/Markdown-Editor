@@ -62,6 +62,7 @@ function Sidebar({
             selectedFileContent={file?.content}
             setFileName={setFileName}
             setMarkdownContent={setMarkdownContent}
+            fileId = {file?._id}
             key={file?._id}
           />
         ))}
