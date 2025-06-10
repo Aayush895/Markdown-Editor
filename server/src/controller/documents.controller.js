@@ -1,6 +1,7 @@
 import {
   getDocumentsRepository,
   createDocumentRepository,
+  editDocumentRepository,
   deleteFileRepository,
 } from '../repositories/documentRepo/documentRepository.js';
 
@@ -40,6 +41,27 @@ export async function createDocument(req, res) {
   } catch (error) {
     console.log('Something went wrong when creating the document: ', error);
     res.status(500).send('Error creating the document');
+  }
+}
+
+export async function editDocument(req, res) {
+  try {
+    const { name, content } = req.body;
+    const { id } = req.params;
+
+    if (!id) {
+      throw new Error('Please provide file id');
+    }
+
+    const updatedDoc = await editDocumentRepository(name, content, id);
+    return res.status(200).send({
+      document: updatedDoc,
+      message: 'Document was updated successfully',
+      success: true,
+    });
+  } catch (error) {
+    console.log('Something went wrong when updating the document: ', error);
+    res.status(500).send('Error updating the document');
   }
 }
 

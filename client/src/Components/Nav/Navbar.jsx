@@ -7,7 +7,7 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import Button from '../Button/Button'
 import styles from '../../CSS/Navbar.module.css'
 import MarkdownContext from '../Context/MarkdownContext'
-import { deleteDocument } from '../Apis/documentApis'
+import { deleteDocument, editDocument } from '../Apis/documentApis'
 import { toast } from 'react-toastify'
 import { fetchMarkdownFiles } from '../../Utils/utilFunctions'
 
@@ -18,11 +18,40 @@ function Navbar({
   setFileName,
   setMarkdownContent,
 }) {
-  const { selectedFileId, setselectedFileId, setmarkdownFiles } = useContext(MarkdownContext)
+  const {
+    markdownContent,
+    selectedFileId,
+    setselectedFileId,
+    setmarkdownFiles,
+  } = useContext(MarkdownContext)
   const [isEditActive, setisEditActive] = useState(false)
 
   function handleFileName(e) {
     setFileName(e.target.value)
+  }
+
+  async function handleSaveChanges() {
+    if (!selectedFileId) {
+      return toast('Please select a file you want to update', {
+        autoClose: 1500,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+      })
+    }
+
+    const response = await editDocument(selectedFileId, {
+      docName: fileName,
+      docBody: markdownContent,
+    })
+
+    await fetchMarkdownFiles(setmarkdownFiles)
+    return toast(`${response?.message}`, {
+      autoClose: 1500,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+    })
   }
 
   async function handleDeleteFile() {
@@ -99,7 +128,11 @@ function Navbar({
           style={{ color: '#5A6069', cursor: 'pointer' }}
           onClick={handleDeleteFile}
         />
-        <Button btnIcon={<IoIosSave size={25} />} btnName="Save Changes" />
+        <Button
+          btnIcon={<IoIosSave size={25} />}
+          btnName="Save Changes"
+          btnFunc={handleSaveChanges}
+        />
       </div>
     </div>
   )

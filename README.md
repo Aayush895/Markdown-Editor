@@ -8,7 +8,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Build sidebar to view all the files
 - [x] Build the Markdown Editor
 - [x] Build the Markdown Preview section
-- [ ] Integrate the backend APIs so that user can perform CRUD operations on the client side
+- [x] Integrate the backend APIs so that user can perform CRUD operations on the client side
 - [ ] Make the UI responsive
 - [ ] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference
 - [ ] Deploy the app
@@ -18,7 +18,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Perform server setup
 - [x] Create the API for fetching all documents
 - [x] Create the API for creating a document
-- [ ] Create the API for editing a document
+- [x] Create the API for editing a document
 - [x] Create the API for deleting a document
 - [ ] Deploy the server on a hosting platform
 - [ ] Integrate the APIs to the client side
