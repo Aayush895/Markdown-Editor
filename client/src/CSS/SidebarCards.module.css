@@ -3,6 +3,14 @@
   display: flex;
   align-items: center;
   margin: 2.5rem 0;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+  padding: 1rem 0.5rem;
+}
+
+.document:hover {
+  background-color: var(--gray-1);
+  border-radius: 0.5rem;
 }
 
 .docHeader > p:first-child {

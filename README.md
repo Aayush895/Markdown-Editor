@@ -10,7 +10,6 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Build the Markdown Preview section
 - [x] Integrate the backend APIs so that user can perform CRUD operations on the client side
 - [ ] Make the UI responsive
-- [ ] Add the dark / light theme toggler and store it in the localStorage so that the browser remebers the theme preference
 - [ ] Deploy the app
 
 # TODOS for Server side:
@@ -21,7 +20,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Create the API for editing a document
 - [x] Create the API for deleting a document
 - [ ] Deploy the server on a hosting platform
-- [ ] Integrate the APIs to the client side
+- [X] Integrate the APIs to the client side
 
 ## Table of contents
 

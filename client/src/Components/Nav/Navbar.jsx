@@ -7,25 +7,27 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import Button from '../Button/Button'
 import styles from '../../CSS/Navbar.module.css'
 import MarkdownContext from '../Context/MarkdownContext'
-import { deleteDocument, editDocument } from '../Apis/documentApis'
+import { editDocument } from '../Apis/documentApis'
 import { toast } from 'react-toastify'
 import { fetchMarkdownFiles } from '../../Utils/utilFunctions'
+import DeletePopup from './DeletePopup'
 
 function Navbar({
   expand,
   handleSideBar,
   fileName,
   setFileName,
-  setMarkdownContent,
 }) {
   const {
     markdownContent,
     selectedFileId,
-    setselectedFileId,
     setmarkdownFiles,
+    deleteDoc,
+    setDeleteDoc,
   } = useContext(MarkdownContext)
-  const [isEditActive, setisEditActive] = useState(false)
 
+  const [isEditActive, setisEditActive] = useState(false)
+  
   function handleFileName(e) {
     setFileName(e.target.value)
   }
@@ -54,7 +56,7 @@ function Navbar({
     })
   }
 
-  async function handleDeleteFile() {
+  function handleDeleteFilepopup() {
     if (!selectedFileId) {
       return toast('Please select a file', {
         autoClose: 1500,
@@ -63,18 +65,7 @@ function Navbar({
         draggable: false,
       })
     }
-    const response = await deleteDocument(selectedFileId)
-    await fetchMarkdownFiles(setmarkdownFiles)
-
-    setFileName('Untitled-document')
-    setMarkdownContent('')
-    setselectedFileId(null)
-    return toast(`${response?.message}`, {
-      autoClose: 1500,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-    })
+    setDeleteDoc(true)
   }
 
   return (
@@ -125,8 +116,9 @@ function Navbar({
       <div className={styles.navEditBtns}>
         <RiDeleteBin6Line
           size={40}
+          className={styles.deleteBtn}
           style={{ color: '#5A6069', cursor: 'pointer' }}
-          onClick={handleDeleteFile}
+          onClick={handleDeleteFilepopup}
         />
         <Button
           btnIcon={<IoIosSave size={25} />}
@@ -134,6 +126,14 @@ function Navbar({
           btnFunc={handleSaveChanges}
         />
       </div>
+
+      {deleteDoc && selectedFileId ? (
+        <DeletePopup
+          fileName={fileName}
+          setDeleteDoc={setDeleteDoc}
+          setFileName={setFileName}
+        />
+      ) : null}
     </div>
   )
 }

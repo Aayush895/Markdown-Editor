@@ -1,0 +1,32 @@
+#overlay {
+  font-family: 'Roboto Slab', serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#popupContainer {
+  color: black;
+  padding: 1.5rem 1rem;
+  width: 22%;
+  background-color: var(--white);
+  opacity: 1;
+  border-radius: 1rem;
+}
+
+#popupContainer > h1 {
+  margin-bottom: 1rem;
+}
+
+#popupContainer > p {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: var(--gray-2);
+}

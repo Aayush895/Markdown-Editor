@@ -13,6 +13,7 @@ function App() {
   const [markdownFiles, setmarkdownFiles] = useState(null)
   const [expand, setExpand] = useState(false)
   const [selectedFileId, setselectedFileId] = useState(null)
+  const [deleteDoc, setDeleteDoc] = useState(false)
 
   function handleSideBar() {
     setExpand(!expand)
@@ -27,6 +28,8 @@ function App() {
         setmarkdownFiles,
         selectedFileId,
         setselectedFileId,
+        deleteDoc,
+        setDeleteDoc,
       }}
     >
       <div id={styles.appContainer}>
