@@ -28,3 +28,7 @@
   color: var(--gray-2);
   margin-bottom: 0.3rem;
 }
+
+.sideBarItems {
+  overflow-y: auto;
+}

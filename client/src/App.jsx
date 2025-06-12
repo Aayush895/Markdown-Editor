@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ToastContainer } from 'react-toastify'
+import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import MarkdownContext from './Components/Context/MarkdownContext'
 import Navbar from './Components/Nav/Navbar'
 import Editor from './Components/Editor/Editor'
@@ -14,9 +15,14 @@ function App() {
   const [expand, setExpand] = useState(false)
   const [selectedFileId, setselectedFileId] = useState(null)
   const [deleteDoc, setDeleteDoc] = useState(false)
+  const [preview, setPreview] = useState(false)
 
   function handleSideBar() {
     setExpand(!expand)
+  }
+
+  function handlePreview() {
+    setPreview(!preview)
   }
 
   return (
@@ -48,8 +54,17 @@ function App() {
             markdownContent={markdownContent}
             setMarkdownContent={setMarkdownContent}
           />
-          <Editor />
-          <Preview />
+          {preview ? (
+            <FaEyeSlash
+              id={styles.removePreview}
+              size={25}
+              onClick={handlePreview}
+            />
+          ) : (
+            <FaEye id={styles.preview} size={25} onClick={handlePreview} />
+          )}
+          {preview ? null : <Editor />}
+          <Preview preview={preview}/>
         </div>
       </div>
       <ToastContainer />

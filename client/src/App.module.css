@@ -2,5 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 91.6vh;
+  height: 91.5vh;
+  overflow-y: hidden;
+}
+
+#preview, #removePreview {
+  position: absolute;
+  right: 1rem;
+  top: 6.5rem;
+  cursor: pointer;
+}
+
+#preview:hover {
+  color: var(--dark-orange);
+}
+
+#removePreview:hover {
+  color: var(--dark-orange);
 }

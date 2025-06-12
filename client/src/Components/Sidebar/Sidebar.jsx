@@ -42,7 +42,11 @@ function Sidebar({
   return (
     <div
       id={styles.sideBarContainer}
-      style={{ width: expand ? '15%' : '0', transition: 'linear 0.05s' }}
+      style={{
+        width: expand ? '15%' : '0',
+        transition: 'linear 0.05s',
+        overflow: expand ? null : 'hidden',
+      }}
     >
       <div className={styles.header}>
         <p>MY DOCUMENTS</p>
@@ -62,7 +66,7 @@ function Sidebar({
             selectedFileContent={file?.content}
             setFileName={setFileName}
             setMarkdownContent={setMarkdownContent}
-            fileId = {file?._id}
+            fileId={file?._id}
             key={file?._id}
           />
         ))}

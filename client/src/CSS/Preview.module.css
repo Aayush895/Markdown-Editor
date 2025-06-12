@@ -1,6 +1,6 @@
+
 /* markdown-styles.css */
 #previewContainer {
-  width: 50%;
   height: 91.5vh;
   border-left: 1px solid var(--dark-white);
   font-family: 'Roboto', sans-serif;
@@ -17,22 +17,230 @@
 
 #preview {
   padding: 0 1rem;
+  line-height: 1.6; /* Improved base line height */
+  overflow-y: auto; /* Add scrolling for long content */
+  height: calc(91.5vh - 4rem); /* Account for header height */
+}
+
+#preview h1 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  color: var(--black-1);
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+#preview h2 {
+  color: var(--black-2);
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+#preview h3,
+#preview h4,
+#preview h5,
+#preview h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+#preview h3 {
+  color: var(--black-3);
+  font-size: 1.25rem; /* Increased from 1rem */
+}
+
+#preview h4 {
+  color: var(--black-4);
+  font-size: 1.1rem; /* Increased from 0.7rem */
+}
+
+#preview h5 {
+  color: var(--black-4);
+  font-size: 1rem; /* Increased from 0.5rem */
+}
+
+#preview h6 {
+  color: var(--dark-orange);
+  font-size: 0.9rem; /* Increased from 0.35rem */
 }
 
 #preview p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: blue;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.8;
+  color: var(--gray-2);
 }
 
-#preview code {
-  background-color: #f7fafc;
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.25rem;
+/* Add spacing for line breaks within paragraphs */
+#preview br {
+  line-height: 2.5; /* Increased for better spacing */
+}
+
+#preview a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#preview a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Inline code styling - simplified to avoid conflicts */
+#preview code:not(pre code) {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-family: 'Courier New', Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  color: #e83e8c;
+  font-weight: 500;
+}
+
+/* Code block styling for non-syntax-highlighted blocks */
+#preview pre {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-family: 'Courier New', Monaco, Consolas, monospace;
+}
+
+#preview pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+/* Syntax highlighter specific styling */
+#preview .react-syntax-highlighter {
+  font-family: 'Courier New', Monaco, Consolas, monospace !important;
+  border-radius: 6px !important;
+  margin: 1.5rem 0 !important;
+  border: 1px solid #e1e4e8 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Override syntax highlighter's pre tag styling */
+#preview .react-syntax-highlighter pre {
+  margin: 0 !important;
+  padding: 16px !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 #preview blockquote {
-  border-left: 4px solid #e2e8f0;
-  padding-left: 1rem;
-  margin: 1rem 0;
+  border-left: 4px solid var(--dark-orange);
+  margin: 1.5rem 0;
+  padding-left: 15px;
+  color: #666;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 15px 15px 15px 20px;
+  border-radius: 0.3rem 0.5rem 0.5rem 0.3rem;
+}
+
+#preview ul,
+#preview ol {
+  padding-left: 30px;
+  margin: 1.5rem 0;
+}
+
+#preview li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Custom bullet points */
+#preview ul {
+  list-style: none;
+}
+
+#preview ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+#preview ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #F39765;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* Nested list styling */
+#preview ul ul li::before {
+  content: '◦';
+  color: #F39765;
+  opacity: 0.8;
+  font-size: 1em;
+}
+
+#preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+  display: block;
+}
+
+#preview hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #e0e0e0, #f0f0f0, #e0e0e0);
+  margin: 2rem 0;
+  border-radius: 1px;
+}
+
+/* Table styling */
+#preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#preview th,
+#preview td {
+  border: 1px solid #e1e4e8;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+#preview th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+  color: #24292e;
+}
+
+#preview tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Additional spacing rules for better text flow */
+#preview > *:first-child {
+  margin-top: 0;
+}
+
+#preview > *:last-child {
+  margin-bottom: 2rem; /* Add some bottom padding */
 }
