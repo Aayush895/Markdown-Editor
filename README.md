@@ -9,7 +9,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Build the Markdown Editor
 - [x] Build the Markdown Preview section
 - [x] Integrate the backend APIs so that user can perform CRUD operations on the client side
-- [ ] Make the UI responsive
+- [x] Make the UI responsive
 - [ ] Deploy the app
 
 # TODOS for Server side:
@@ -20,7 +20,7 @@ This is a solution to the [In-browser markdown editor challenge on Frontend Ment
 - [x] Create the API for editing a document
 - [x] Create the API for deleting a document
 - [ ] Deploy the server on a hosting platform
-- [X] Integrate the APIs to the client side
+- [x] Integrate the APIs to the client side
 
 ## Table of contents
 

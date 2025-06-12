@@ -24,3 +24,9 @@
   padding: 1rem 1rem;
   outline: none;
 }
+
+@media(max-width: 926px) {
+  #editorContainer {
+    width: 100%;
+  }
+}

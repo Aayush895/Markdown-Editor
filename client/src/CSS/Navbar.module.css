@@ -109,3 +109,30 @@
     width: 23%;
   }
 }
+
+@media(max-width: 926px) {
+  #navContainer {
+    padding: 0rem;
+  }
+  
+  .navHeader {
+    width: auto;
+    flex: 1;
+  }
+    
+  .navLogo > p {
+    font-size: large;
+    letter-spacing: 0.2rem;
+    padding: 0;
+    border-right: none;
+    display: none; /* Hide on very small screens */
+  }
+  
+  .docHeader {
+    display: none;
+  }
+  
+  .navEditBtns {
+    width: 40%;
+  }
+}

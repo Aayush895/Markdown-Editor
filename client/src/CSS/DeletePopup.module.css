@@ -30,3 +30,9 @@
   line-height: 2rem;
   color: var(--gray-2);
 }
+
+@media(max-width: 926px) {
+  #popupContainer {
+    width: 100%;
+  }
+}

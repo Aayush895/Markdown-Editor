@@ -21,11 +21,9 @@
   background-color: var(--orange);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 926px) {
   #button {
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    min-height: 48px; /* Larger touch target for tablets */
+    padding: 0.75rem 0.5rem;
     border-radius: 0.5rem;
   }
   

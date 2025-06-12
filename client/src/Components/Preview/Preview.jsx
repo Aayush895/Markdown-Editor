@@ -9,11 +9,17 @@ import styles from '../../CSS/Preview.module.css'
 
 function Preview({ preview }) {
   const { markdownContent } = useContext(MarkdownContext)
+  let width = 0
+  if(window.innerWidth > 926) {
+    width = '50%'
+  } else {
+    width = '100%'
+  }
 
   return (
     <div
       id={styles.previewContainer}
-      style={{ width: preview ? '100%' : '50%' }}
+      style={{ width: preview ? '100%' : width }}
     >
       <div id={styles.header}>
         <p>PREVIEW</p>

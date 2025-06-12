@@ -3,6 +3,7 @@
   background-color: var(--black-2);
   color: var(--white);
   font-family: 'Roboto', sans-serif;
+  overflow-y: scroll;
 }
 
 .header {
@@ -27,8 +28,4 @@
 .docHeader > p:first-child {
   color: var(--gray-2);
   margin-bottom: 0.3rem;
-}
-
-.sideBarItems {
-  overflow-y: auto;
 }

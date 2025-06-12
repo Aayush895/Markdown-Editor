@@ -120,11 +120,19 @@ function Navbar({
           style={{ color: '#5A6069', cursor: 'pointer' }}
           onClick={handleDeleteFilepopup}
         />
-        <Button
-          btnIcon={<IoIosSave size={25} />}
-          btnName="Save Changes"
-          btnFunc={handleSaveChanges}
-        />
+        {window.innerWidth <= 926 ? (
+          <Button
+            btnIcon={<IoIosSave size={25} />}
+            btnName={null}
+            btnFunc={handleSaveChanges}
+          />
+        ) : (
+          <Button
+            btnIcon={<IoIosSave size={25} />}
+            btnName="Save Changes"
+            btnFunc={handleSaveChanges}
+          />
+        )}
       </div>
 
       {deleteDoc && selectedFileId ? (

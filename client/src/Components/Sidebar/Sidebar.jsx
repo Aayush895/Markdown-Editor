@@ -42,8 +42,10 @@ function Sidebar({
   let width = 0;
   if(window.innerWidth > 1440) {
     width = '15%'
-  } else {
+  } else if(window.innerWidth > 926) {
     width = '23%'
+  } else {
+    width = '100%'
   }
 
   return (

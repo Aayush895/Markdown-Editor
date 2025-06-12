@@ -63,8 +63,14 @@ function App() {
           ) : (
             <FaEye id={styles.preview} size={25} onClick={handlePreview} />
           )}
-          {preview ? null : <Editor />}
-          <Preview preview={preview}/>
+          {window.innerWidth > 926 ? (
+            <>
+              {preview ? null : <Editor />}
+              <Preview preview={preview} />
+            </>
+          ) : (
+            <>{preview ? <Preview preview={preview} /> : <Editor />}</>
+          )}
         </div>
       </div>
       <ToastContainer />
