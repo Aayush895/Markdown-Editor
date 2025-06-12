@@ -20,3 +20,9 @@
 #removePreview:hover {
   color: var(--dark-orange);
 }
+
+@media(max-width: 1440px) {
+  #editorPreviewContainer {
+    height: 90vh;
+  }
+}

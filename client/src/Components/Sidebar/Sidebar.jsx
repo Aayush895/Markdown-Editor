@@ -39,11 +39,18 @@ function Sidebar({
     setMarkdownContent('')
   }
 
+  let width = 0;
+  if(window.innerWidth > 1440) {
+    width = '15%'
+  } else {
+    width = '23%'
+  }
+
   return (
     <div
       id={styles.sideBarContainer}
       style={{
-        width: expand ? '15%' : '0',
+        width: expand ? width : '0',
         transition: 'linear 0.05s',
         overflow: expand ? null : 'hidden',
       }}
