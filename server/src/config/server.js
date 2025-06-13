@@ -9,13 +9,8 @@ app.use(express.json());
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://my-notes-app.netlify.app',
+  'https://markdown-editor-hymyome0e-aayush895s-projects.vercel.app/',
 ];
-// app.use(
-//   cors({
-//     origin: 'http://localhost:5173',
-//   })
-// );
 
 app.use(
   cors({
