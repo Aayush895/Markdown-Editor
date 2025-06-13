@@ -9,7 +9,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://markdown-editor-hymyome0e-aayush895s-projects.vercel.app/',
+  'https://markdown-editor-hymyome0e-aayush895s-projects.vercel.app',
 ];
 
 app.use(
